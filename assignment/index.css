@@ -1,0 +1,37 @@
+@font-face {
+    font-family: poppins-regular;
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url('fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: anonymouspro-regular;
+    src: url('fonts/AnonymousPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: anonymouspro-bold;
+    src: url('fonts/AnonymousPro-Bold.ttf');
+}
+
+@font-face {
+    font-family: anonymouspro-italic;
+    src: url('fonts/AnonymousPro-Italic.ttf');
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: poppins-regular;
+}
+
+p {
+    font-family: anonymouspro-regular  ;
+}
+
+aside { 
+    display: none;
+}

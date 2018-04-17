@@ -72,6 +72,7 @@ section {
 }
 
 
+
 /* overview */
 
 .the-overview-page {
@@ -134,7 +135,7 @@ section {
   right: 0;
   margin-right: 2em;
   bottom: 47%;
-  background-color: green;
+  background-color: white;
   padding: 2em;
   border-radius: 3em;
   box-shadow: 3px 3px 10px;
