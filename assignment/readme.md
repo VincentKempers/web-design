@@ -76,3 +76,6 @@ What grades have been given to the minor. Plus a quote to finish it off.
 - [ ] Need to know what there was made.
 - [ ] Recommendations.
 - [ ] Know when you can subscribe.
+
+
+> Marijn wants to ...
