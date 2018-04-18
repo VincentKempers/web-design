@@ -14,9 +14,9 @@
 ## Approach
 
 - [x] Inventory
-- [ ] User scenario's
-- [ ] Card sorting
-- [ ] Mjens
+- [x] User scenario's
+- [x] Card sorting
+- [x] User Interview
 
 ## Re-arranged Inventory of the website
 
