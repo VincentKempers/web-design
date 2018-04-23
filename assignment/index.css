@@ -1,6 +1,10 @@
+:root {
+  --main-color: rgba(248, 204, 70, 1.000);
+}
+
 @font-face {
     font-family: poppins-regular;
-    src: url('fonts/Poppins-Regular.ttf');
+    src: url('fonts/Poppins-Medium.ttf');
 }
 
 @font-face {
@@ -9,18 +13,23 @@
 }
 
 @font-face {
-    font-family: anonymouspro-regular;
-    src: url('fonts/AnonymousPro-Regular.ttf');
+    font-family: open-sans;
+    src: url('fonts/open-sans-bold-Regular.ttf');
 }
 
 @font-face {
-    font-family: anonymouspro-bold;
+    font-family: open-sans-bold;
+    src: url('fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: anon-bold;
     src: url('fonts/AnonymousPro-Bold.ttf');
 }
 
-@font-face {
-    font-family: anonymouspro-italic;
-    src: url('fonts/AnonymousPro-Italic.ttf');
+body {
+  margin: 0;
+  background-color: var(--main-color);
 }
 
 
@@ -28,10 +37,113 @@ h1,h2,h3,h4,h5,h6 {
     font-family: poppins-regular;
 }
 
-p {
-    font-family: anonymouspro-regular  ;
+p,li,a {
+    font-family: open-sans, helvetica, sans-serif;
+    max-width: 40em;
+    line-height: 35px;
+    letter-spacing: 2.2px;
 }
 
-aside { 
-    display: none;
+nav {
+  background-color: var(--main-color);
+}
+
+nav ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   list-style: none;
+   align-items: center;
+}
+
+nav ul > li {
+  margin-right: 3em;
+}
+
+nav ul li > a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul > li:last-of-type {
+  background-color: black;
+  padding: .8em;
+}
+
+nav ul li:last-child > a {
+  font-family: open-sans-bold, sans-serif;
+  color: var(--main-color);
+}
+
+header {
+  background: var(--main-color);
+}
+
+main {
+  margin: 0;
+}
+
+
+main > #intro {
+  padding: 5em 0 4em 2em;
+  background-color: white;
+  /* -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em); */
+}
+
+@media screen and (min-width: 40em) {
+  main > #intro {
+    -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em);
+  }
+}
+
+@media screen and (min-width: 80em) {
+  main > #intro {
+    -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em);
+  }
+}
+
+
+main > #impression {
+  padding: 3em 0 4em 2em;
+  background-color: var(--main-color);
+}
+
+main > #match {
+  padding: 5em 0 4em 2em;
+  background-color: white;
+}
+
+@media screen and (min-width: 40em) {
+  main > #match {
+    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+  }
+}
+
+@media screen and (min-width: 80em) {
+  main > #match {
+    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+  }
+}
+
+main > #werkwijze {
+  padding: 3em 0 4em 2em;
+  background-color: var(--main-color);
+}
+
+footer {
+  padding: 5em 0 4em 2em;
+  background-color: white;
+  /* -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em); */
+}
+
+@media screen and (min-width: 40em) {
+  footer {
+    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+  }
+}
+
+@media screen and (min-width: 80em) {
+  footer {
+    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+  }
 }
