@@ -15,7 +15,7 @@
   <div class="background-style"></div>
   <nav>
     <ul>
-      <li><a href="#">lorem</a></li>
+      <li><a href="lesprogramma.html">lorem</a></li>
       <li><a href="#">lorem</a></li>
       <li><a href="#">lorem</a></li>
       <li><a href="#">Aanmelden</a></li>
@@ -54,23 +54,64 @@
 
         <section id="impression">
             <h2>Impressie</h2>
-            <div>
-                <article>
-                    <h3 lang="en">Showtime</h3>
-                    <img src="./Minor Web Development — CMD Amsterdam_files/showtime.jpg" alt="Presentatie van eindwerk">
-                </article>
-                <article>
-                    <h3 lang="en">Theme parks for the web</h3>
-                    <img src="./Minor Web Development — CMD Amsterdam_files/theme-parks-for-the-web.jpg" alt="Op bezoek bij Lifely">
-                </article>
-                <article>
-                    <h3 lang="en">Showtime</h3>
-                    <img src="./Minor Web Development — CMD Amsterdam_files/who-you-gonna-call.jpg" alt="Een impressie van een college">
-                </article>
-                <article>
-                    <h3>Sensors</h3>
-                    <img src="./Minor Web Development — CMD Amsterdam_files/sensors.jpg" alt="Er wordt ook met sensors gewerkt">
-                </article>
+            <div id="scrollboi">
+              <article>
+                  <img src="imgs/cmd-18/image-cmd-18-14.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-16-17/showtime.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-16-17/theme-parks-for-the-web.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-0.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-1.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-2.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-3.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-4.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-5.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-6.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-7.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-8.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-9.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-10.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-12.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-13.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-15.jpg" alt="Titus die rond aan het klikken is">
+              </article>
+              <article>
+                <img src="imgs/cmd-18/image-cmd-18-16.jpg" alt="Titus die rond aan het klikken is">
+              </article>
             </div>
         </section>
 
@@ -138,6 +179,45 @@
         <q>Het was een top minor. Ik zou hem zo nog een keer kiezen!</q>
 
     </footer>
+
+    <script type="text/javascript">
+    ScrollRate = 100;
+
+function scrollDiv_init() {
+DivElmnt = document.getElementById('scrollboi');
+ReachedMaxScroll = false;
+
+DivElmnt.scrollTop = 0;
+PreviousScrollTop  = 0;
+
+ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+}
+
+function scrollDiv() {
+
+if (!ReachedMaxScroll) {
+  DivElmnt.scrollTop = PreviousScrollTop;
+  PreviousScrollTop++;
+
+  ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+}
+else {
+  ReachedMaxScroll = (DivElmnt.scrollTop == 0)?false:true;
+
+  DivElmnt.scrollTop = PreviousScrollTop;
+  PreviousScrollTop--;
+}
+}
+
+function pauseDiv() {
+clearInterval(ScrollInterval);
+}
+
+function resumeDiv() {
+PreviousScrollTop = DivElmnt.scrollTop;
+ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+}
+    </script>
 
 </body>
 
