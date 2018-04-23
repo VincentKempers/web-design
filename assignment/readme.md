@@ -11,6 +11,12 @@
 
 --------
 
+## Minor website
+
+The website of the minor web development needs an upgrade. It is my task to make this upgrade accessible for one user (Marijn) and for the users that would probably visit the site. That would be in this case students that need an minor in different cases. A user that would be looking for a minor that hasn't really been into development. And a user that knows that he wants.
+
+I really want to challenge myself to please the new students and make it so pleasurable
+
 ## Approach
 
 - [x] Inventory
@@ -57,22 +63,20 @@ Required to join the Minor.
 
 ## User scenario
 
-### Show are the users i am designing for?
-
-#### A Student that is looking for a minor
+### A Student that is looking for a minor
 
 - [ ] Needs to know who to contact for the minor.
 - [ ] Has a representation of the minor.
 - [ ] Need to know what there was made.
 - [ ] Recommendations.
-- [ ] Know when you can subscribe.
+- [ ] Know when & where you can apply.
 
-##### User scenario
+### User scenario
 > Peter (22) is a student of CMD and really wants to be a developer. He is certain that he wants to do the minor, but needs to know when and where to sign up. He likes to know what he is going to learn from the minor web development.
 
 > Lianne (24) is a student of CMD and is into visual design, but has an affinity for web development. She is on the fence on which minor to choose. Lianna had some positive experiences of other tech classes and would love to expand her knowledge. She really wants to make her designs come to life.
 
-#### Marijn
+### Marijn
 
 - [ ] Has to navigate with tab.
 - [ ] Has a representation of the minor.
