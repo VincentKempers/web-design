@@ -1,6 +1,10 @@
+/* VARIABLES */
+
 :root {
   --main-color: rgba(248, 204, 70, 1.000);
 }
+
+/* FONTS */
 
 @font-face {
     font-family: poppins-regular;
@@ -27,9 +31,22 @@
     src: url('fonts/AnonymousPro-Bold.ttf');
 }
 
+/* ANIMATIONS */
+
+/* declaring global things */
+
 body {
   margin: 0;
   background-color: var(--main-color);
+  background-image: url("imgs/pattern.png");
+  background-repeat: repeat;
+  background-blend-mode: color-burn;
+}
+
+#background-style {
+  width: 100%;
+  height: 100%;
+  background-color: black;
 }
 
 
@@ -44,8 +61,10 @@ p,li,a {
     letter-spacing: 2.2px;
 }
 
+/* navigation */
+
 nav {
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
 }
 
 nav ul {
@@ -75,75 +94,78 @@ nav ul li:last-child > a {
   color: var(--main-color);
 }
 
+/* header styling */
+
 header {
-  background: var(--main-color);
+  padding-left: 2em;
 }
 
 main {
   margin: 0;
 }
 
+/* main content */
 
 main > #intro {
-  padding: 5em 0 4em 2em;
+  padding: 6em 0 5em 2em;
   background-color: white;
-  /* -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em); */
 }
 
 @media screen and (min-width: 40em) {
   main > #intro {
-    -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
 
 @media screen and (min-width: 80em) {
   main > #intro {
-    -webkit-clip-path: polygon(1px 100%,100% 31em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
 
 
 main > #impression {
-  padding: 3em 0 4em 2em;
-  background-color: var(--main-color);
+  padding: 6em 0 5em 2em;
+  /* background-color: var(--main-color); */
 }
 
 main > #match {
-  padding: 5em 0 4em 2em;
+  padding: 6em 0 5em 2em;
   background-color: white;
 }
 
 @media screen and (min-width: 40em) {
   main > #match {
-    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 40em,100% 1px,0px 5em);
   }
 }
 
 @media screen and (min-width: 80em) {
   main > #match {
-    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 40em,100% 1px,0px 5em);
   }
 }
 
 main > #werkwijze {
-  padding: 3em 0 4em 2em;
-  background-color: var(--main-color);
+  padding: 6em 0 5em 2em;
+  /* background-color: var(--main-color); */
 }
 
+
+/* footer */
 footer {
-  padding: 5em 0 4em 2em;
+  padding: 6em 0 5em 2em;
   background-color: white;
-  /* -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em); */
 }
 
 @media screen and (min-width: 40em) {
   footer {
-    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
 
 @media screen and (min-width: 80em) {
   footer {
-    -webkit-clip-path: polygon(1px 100%,100% 38em,100% 1px,0px 4em);
+    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
