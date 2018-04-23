@@ -2,6 +2,7 @@
 
 :root {
   --main-color: rgba(248, 204, 70, 1.000);
+  --padding-sections: 6em 0 6em 1em;
 }
 
 ::-webkit-scrollbar {
@@ -67,9 +68,6 @@ p,li,a {
 
 /* navigation */
 
-nav {
-  /* background-color: var(--main-color); */
-}
 
 nav ul {
    display: flex;
@@ -80,7 +78,7 @@ nav ul {
 }
 
 nav ul > li {
-  margin-right: 3em;
+  margin-right: .5em;
 }
 
 nav ul li > a {
@@ -91,6 +89,17 @@ nav ul li > a {
 nav ul > li:last-of-type {
   background-color: black;
   padding: .8em;
+  position: fixed;
+  bottom: 0;
+  margin: 1em 1em 1em 0;
+}
+
+@media screen and (min-width: 40em) {
+  nav ul > li:last-of-type {
+    position: inherit;
+    bottom:none;
+    margin: 0 2em 0 0;
+  }
 }
 
 nav ul li:last-child > a {
@@ -111,25 +120,27 @@ main {
 /* main content */
 
 main > #intro {
-  padding: 6em 0 5em 2em;
+  padding: var(--padding-sections);
   background-color: white;
+  width: 100vw;
 }
 
 @media screen and (min-width: 40em) {
   main > #intro {
-    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
+    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
   }
 }
 
-@media screen and (min-width: 80em) {
+@media screen and (min-width: 70em) {
   main > #intro {
-    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
+    -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
   }
 }
 
 
 main > #impression {
-  padding: 6em 0 5em 2em;
+  padding: var(--padding-sections);
+  width: 100vw;
 }
 
 main #impression > div {
@@ -150,8 +161,9 @@ main #impression div article > img{
 }
 
 main > #match {
-  padding: 6em 0 5em 2em;
+  padding: var(--padding-sections);
   background-color: white;
+  width: 100vw;
 }
 
 @media screen and (min-width: 40em) {
@@ -167,31 +179,65 @@ main > #match {
 }
 
 main > #werkwijze {
-  padding: 6em 0 5em 2em;
-  /* background-color: var(--main-color); */
+  padding: var(--padding-sections);
+  width: 100vw;
 }
 
 
 /* footer */
-footer {
-  padding: 6em 0 5em 2em;
+#Testimonials {
+  padding: var(--padding-sections);
   background-color: white;
+  width: 100vw;
 }
 
 @media screen and (min-width: 40em) {
-  footer {
+  #Testimonials {
+    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+  }
+}
+
+@media screen and (min-width: 70em) {
+  #Testimonials {
     -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
 
-@media screen and (min-width: 80em) {
-  footer {
-    -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
-  }
+#Aanmelden {
+  padding: var(--padding-sections);
+  width: 100vw;
 }
 
 
 /* lesprogramma */
+
+
+main > #diagram {
+  padding: 6em 0 6em 0;
+  background-color: white;
+  width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  main > #diagram {
+    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+  }
+}
+
+@media screen and (min-width: 70em) {
+  main > #diagram {
+    -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
+  }
+}
+
+
+/* lesprogramma tabel */
+table {
+  overflow-x: scroll;
+
+}
+
+
 table thead > tr {
   background-color: var(--main-color);
   font-family: open-sans, sans-serif;
@@ -200,7 +246,7 @@ table thead > tr {
 td > a {
   text-decoration: none;
   color: black;
-  padding: 1em;
+  /* padding: 1em; */
 }
 
 td {
@@ -230,4 +276,36 @@ td[colspan="5"] {
 
 td[colspan="2"] {
   background-color: grey;
+}
+
+/* lesprogramma - Uitleg */
+
+#courses {
+  padding: var(--padding-sections);
+  width: 100vw;
+}
+
+
+/* lesprogramma - Toelatingseisen */
+
+#requirements {
+  padding: var(--padding-sections);
+  background-color: white;
+  width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  #requirements {
+    -webkit-clip-path: polygon(1px 100%,100% 27em,100% 1px,0px 5em);
+  }
+}
+
+@media screen and (min-width: 70em) {
+  #requirements {
+    -webkit-clip-path: polygon(1px 100%,100% 24em,100% 1px,0px 5em);
+  }
+}
+
+#application {
+  padding: var(--padding-sections);
 }
