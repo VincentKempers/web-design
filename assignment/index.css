@@ -189,3 +189,45 @@ footer {
     -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
   }
 }
+
+
+/* lesprogramma */
+table thead > tr {
+  background-color: var(--main-color);
+  font-family: open-sans, sans-serif;
+}
+
+td > a {
+  text-decoration: none;
+  color: black;
+  padding: 1em;
+}
+
+td {
+  padding: .4em;
+  text-align: center;
+}
+
+td[rowspan="2"] {
+  background-color: lightgrey;
+}
+
+td[colspan="8"] {
+  background-color: lightgrey;
+}
+
+tr:last-of-type > td[colspan="3"] {
+  background-color: lightgrey;
+}
+
+td[colspan="3"] {
+  background-color: #eee;
+}
+
+td[colspan="5"] {
+  background-color: orange;
+}
+
+td[colspan="2"] {
+  background-color: grey;
+}
