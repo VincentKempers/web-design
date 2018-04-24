@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6 {
     font-family: poppins-regular;
 }
 
-p,li,a,input,label {
+p,li,a,input,label,summary,abbr {
     font-family: open-sans, helvetica, sans-serif;
     max-width: 40em;
     line-height: 35px;
@@ -405,4 +405,17 @@ button:focus {
   transition:all .2s;
   margin-top:-3em;
   opacity:0;
+}
+
+
+/* detail, abbr */
+
+details > p {
+  padding-left: 3em;
+  opacity: 0;
+}
+
+details[open] > p {
+  opacity: 1;
+  transition: opacity 1s ease 1s;
 }
