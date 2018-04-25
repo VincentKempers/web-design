@@ -9,11 +9,6 @@
     display: none;
 }
 
-:focus {
-  background-color: black;
-  color: var(--main-color);
-}
-
 /* FONTS */
 
 @font-face {
@@ -45,6 +40,12 @@
 
 /* declaring global things */
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding:0;
@@ -63,10 +64,12 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: poppins-regular;
+    margin-bottom: 1.5em;
 }
 
+
 h2:focus, h3:focus {
-  width: 8em;
+  width: 10em;
   transition-property: background-color, color;
   transition-duration: .5s;
   transition-timin g-function: ease-in;
@@ -112,6 +115,12 @@ nav ul li:last-of-type > a {
   bottom: 0;
   margin: 1em 1em 1em 0;
   right: 0;
+}
+
+nav ul li > a:focus {
+  background-color: black;
+  color: var(--main-color);
+  padding: 1em;
 }
 
 @media screen and (min-width: 40em) {
@@ -181,7 +190,7 @@ main #impression div article > h3 {
   display: none;
 }
 
-main #impression div article > img{
+main #impression div article > img {
   width: 30em;
   padding-right: 2em;
   height: auto;
@@ -212,6 +221,13 @@ main > #werkwijze {
 
 a {
   transition: all .1s cubic-bezier(.95,.05,.8,.04)
+}
+
+a:focus {
+  background-color: black;
+  color: var(--main-color);
+  padding: .5em;
+  margin: .3em;
 }
 /* footer */
 #Testimonials {
@@ -251,6 +267,8 @@ a {
 
 
 main > #diagram {
+  display: flex;
+  justify-content: space-between;
   padding: 6em 0 6em 4em;
   background-color: white;
   width: 100vw;
@@ -268,19 +286,46 @@ main > #diagram {
   }
 }
 
+#diagram div > p {
+  margin-right: 8em;
+  padding-top: 3em;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
 /* lesprogramma - Uitleg */
 
 #courses {
   padding: var(--padding-sections);
   width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 6em 0 6em 4em;
+  width: 100vw;
 }
 
-h2[tabindex="0"]:focus {
-  background-image: url("imgs/h2.svg");
+ul > h2 {
+  margin-bottom: 2em;
+}
+
+#courses > ul, #diagram > ul {
+  list-style: none;
+}
+
+#courses div > p {
+    margin-right: 8em;
+    padding-top: 3em;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+[tabindex="0"]:focus {
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top right;
   background-size: 60px;
-  background-color: none;
+  background-color: black;
+  color: var(--main-color);
+  padding: .5em;
   outline: none;
 }
 
@@ -343,32 +388,33 @@ input:focus {
   transform: scale(1.01, 1.01);
 }
 
-input:focus + .tooltip {
-  display:block;
-  opacity:1;
-  margin-top:-1.3em;
-}
 input:disabled {
-  border-color:#eee;
+  border-color: #eee;
   background-color: #f9f9f9;
 }
+
 input::placeholder {
   color:rgba(0,0,0,.25);
-  font-style:italic;
+  font-style: italic;
 }
+
 form button {
   font-size: 1.25em;
-  flex:0 0 2em;
-  transition:all .2s 1s;
-  opacity:.3;
-  width:6em;
+  flex: 0 0 2em;
+  transition: all .2s;
+  opacity: .3;
+  width: 6em;
+  border: none;
 }
 
 form:valid button {
-  opacity:1
+  opacity:1;
 }
+
 button:focus {
   transform: scale(1.1, 1.1);
+  background-color: black;
+  color: var(--main-color);
 }
 
 
@@ -383,4 +429,18 @@ details > p {
 details[open] > p {
   opacity: 1;
   transition: opacity 1s ease 1s;
+}
+
+
+/*  dingen */
+
+#Testimonials {
+  display: flex;
+  flex-direction: row;
+}
+
+#Testimonials div:last-of-type > h2 {
+  padding-left: 1em;
+  font-size: 10em;
+  margin-bottom: 0;
 }
