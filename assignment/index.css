@@ -77,7 +77,6 @@ h1,h2,h3,h4,h5,h6 {
 
 
 h2:focus, h3:focus, h2:hover, h3:hover {
-  width: 100%;
   transition-property: background-color, color;
   transition-duration: .5s;
   transition-timin g-function: ease-in;
@@ -121,7 +120,7 @@ nav ul li > a {
   text-decoration: none;
   background-color: none;
   color: black;
-  padding: 1.4em;
+  padding: .5em;
   transition-property: background-color, color;
   transition-duration: .5s;
   transition-timin g-function: ease-in;
@@ -141,6 +140,12 @@ nav ul li > a:focus, nav ul li > a:hover {
   background-color: black;
   color: var(--main-color);
   padding: .5em;
+}
+
+nav ul li:last-of-type > a:focus, nav ul li:last-of-type > a:hover {
+  background-color: black;
+  color: var(--main-color);
+  padding: .8em;
 }
 
 @media screen and (min-width: 40em) {
@@ -523,6 +528,10 @@ ul > h2 {
   margin-bottom: 2em;
 }
 
+section > h2 {
+  padding: .5em !important;
+}
+
 #courses > ul, #diagram > ul {
   list-style: none;
 }
@@ -535,9 +544,6 @@ ul > h2 {
 }
 
 [tabindex="0"]:focus, [tabindex="0"]:hover {
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 60px;
   background-color: black;
   color: var(--main-color);
   padding: .5em;

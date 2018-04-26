@@ -13,6 +13,8 @@
 
 ## Minor website
 
+![Home page!](assets/home.png)
+
 The website of the minor web development needs an upgrade. It is my task to make this upgrade accessible for one user (Marijn) and for the users that would probably visit the site. That would be in this case students that need an minor in different cases. A user that would be looking for a minor that hasn't really been into development. And a user that knows that he wants.
 
 I really want to challenge myself to please the new students and make it so pleasurable
@@ -27,6 +29,8 @@ I really want to challenge myself to please the new students and make it so plea
 ## Re-arranged Inventory of the website
 
 ### What is this minor?
+
+
 
 #### Application for the minor
 **Home:** First thing you see should be the button. The button should access the information of "where can i join" and "how can i get my application.".
@@ -65,23 +69,23 @@ Required to join the Minor.
 
 ### A Student that is looking for a minor
 
-- [ ] Needs to know who to contact for the minor.
-- [ ] Has a representation of the minor.
+- [x] Needs to know who to contact for the minor.
+- [x] Has a impression of the minor.
 - [ ] Need to know what there was made.
-- [ ] Recommendations.
-- [ ] Know when & where you can apply.
+- [x] Recommendations (_How did we score!?_).
+- [x] Know where you can apply.
 
 ### User scenario
 > Peter (22) is a student of CMD and really wants to be a developer. He is certain that he wants to do the minor, but needs to know when and where to sign up. He likes to know what he is going to learn from the minor web development.
 
-> Nick (24) is a student of CMD and is into visual design, but has an affinity for web development. He is on the fence on which minor to choose. Lianna had some positive experiences of other tech classes and would love to expand her knowledge. She really wants to make her designs come to life.
+> Nick (24) is a student of CMD and is into visual design, but has an affinity for web development. He is on the fence on which minor to choose. Nick had some positive experiences of other tech classes and would love to expand her knowledge. She really wants to make her designs come to life.
 
 ### Marijn
 
-- [ ] Has to navigate with tab.
-- [ ] Has a representation of the minor.
+- [ ] ~~Has to navigate with tab~~ (_he uses space_).
+- [x] Has a good knowledge of the minor.
 - [ ] Need to know what there was made.
-- [ ] Recommendations.
-- [ ] Know when you can subscribe.
+- [x] Recommendations (_How did we score!?_).
+- [x] Know where you can subscribe.
 
-> Marijn Meijles (?) is a developer with a great mind. His disability is makes it hard for him to make precise movements. So he navigate websites with his keyboard. The navigation inside a website is mostly hard to do on the web. Marijn would love to know what the minor web development have made and what it's like to be in this minor. It should be a pleasurable experience.
+> Marijn Meijles (?) is a developer with a great mind. His disability is makes it hard for him to make precise movements. So he navigate websites with his keyboard (_spacebar_). The navigation inside a website is mostly hard to do on the web. Marijn would love to know what the minor web development have made and what it's like to be in this minor. It should be a pleasurable experience.
