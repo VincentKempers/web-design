@@ -74,7 +74,7 @@ Required to join the Minor.
 ### User scenario
 > Peter (22) is a student of CMD and really wants to be a developer. He is certain that he wants to do the minor, but needs to know when and where to sign up. He likes to know what he is going to learn from the minor web development.
 
-> Lianne (24) is a student of CMD and is into visual design, but has an affinity for web development. She is on the fence on which minor to choose. Lianna had some positive experiences of other tech classes and would love to expand her knowledge. She really wants to make her designs come to life.
+> Nick (24) is a student of CMD and is into visual design, but has an affinity for web development. He is on the fence on which minor to choose. Lianna had some positive experiences of other tech classes and would love to expand her knowledge. She really wants to make her designs come to life.
 
 ### Marijn
 

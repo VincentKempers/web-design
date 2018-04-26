@@ -12,7 +12,6 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="lesprogramma.html">Lesprogramma</a></li>
-      <li><a href="bedrijven.html">Bedrijven</a></li>
       <li><a href="#">Aanmelden</a></li>
     </ul>
   </nav>
@@ -148,7 +147,7 @@ var blokvier = [{
 
   for (var i = 0; i < allCourses.length; i++) {
     console.log(allCourses[i].innerHTML);
-    allCourses[i].addEventListener('focus',(event) => {
+    allCourses[i].addEventListener('mouseover',(event) => {
       for (var i = 0; i < blokdrie.length; i++) {
       if (event.target.innerHTML === blokdrie[i].course ) {
         textStuff.style.opacity = 1;
@@ -166,7 +165,7 @@ var blokvier = [{
 
   for (var i = 0; i < allCoursesfour.length; i++) {
     console.log(allCoursesfour[i].innerHTML);
-    allCoursesfour[i].addEventListener('focus',(event) => {
+    allCoursesfour[i].addEventListener('mouseover',(event) => {
       for (var i = 0; i < blokvier.length; i++) {
       if (event.target.innerHTML === blokvier[i].course ) {
         textStufffour.style.opacity = 1;
