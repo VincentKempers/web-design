@@ -3,6 +3,7 @@
 :root {
   --main-color: rgba(248, 204, 70, 1.000);
   --padding-sections: 6em 0 6em 4em;
+  --mobile-sections: 2em;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +24,7 @@
 
 @font-face {
     font-family: open-sans;
-    src: url('fonts/open-sans-bold-Regular.ttf');
+    src: url('fonts/OpenSans-Regular.ttf');
 }
 
 @font-face {
@@ -40,15 +41,10 @@
 
 /* declaring global things */
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 body {
   margin: 0;
-  padding:0;
+  padding: 0;
   background-color: var(--main-color);
   background-image: url("imgs/pattern.png");
   background-repeat: repeat;
@@ -65,11 +61,12 @@ body {
 h1,h2,h3,h4,h5,h6 {
     font-family: poppins-regular;
     margin-bottom: 1.5em;
+    margin-top: 1.5em;
 }
 
 
-h2:focus, h3:focus {
-  width: 10em;
+h2:focus:hover, h3:focus {
+  /* width: 10em; */
   transition-property: background-color, color;
   transition-duration: .5s;
   transition-timin g-function: ease-in;
@@ -88,14 +85,29 @@ p,li,a,input,label,summary,abbr {
 nav ul {
    display: flex;
    flex-direction: row;
-   justify-content: flex-end;
+   justify-content: center;
    list-style: none;
    align-items: center;
    margin-top: 2em;
 }
 
 nav ul > li {
-  margin-right: 2em;
+  margin-right: 1em;
+}
+
+@media screen and (min-width: 70em) {
+  nav ul {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     list-style: none;
+     align-items: center;
+     margin-top: 2em;
+  }
+
+  nav ul > li {
+    margin-right: 2em;
+  }
 }
 
 nav ul li > a {
@@ -114,11 +126,11 @@ nav ul li:last-of-type > a {
   padding: .8em;
   position: fixed;
   bottom: 0;
-  margin: 1em 1em 1em 0;
   right: 0;
+  margin: 1em 1em 1em 0;
 }
 
-nav ul li > a:focus {
+nav ul li > a:focus, nav ul li > a:hover {
   background-color: black;
   color: var(--main-color);
   padding: 1em;
@@ -131,10 +143,11 @@ nav ul li > a:focus {
     margin: 0 2em 0 0;
   }
 
-  nav ul li:last-of-type > a:focus {
+  nav ul li:last-of-type > a:focus, nav ul li:last-of-type > a:hover {
     position: inherit;
     bottom: none;
     color: var(--main-color);
+    background-color: black;
     margin: 0 2em 0 0;
   }
 }
@@ -157,7 +170,7 @@ main {
 /* main content */
 
 main > #intro {
-  padding: var(--padding-sections);
+  padding: var(--mobile-sections);
   background-color: white;
   width: 100vw;
 }
@@ -165,12 +178,14 @@ main > #intro {
 @media screen and (min-width: 40em) {
   main > #intro {
     -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
 @media screen and (min-width: 70em) {
   main > #intro {
     -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
@@ -198,7 +213,7 @@ main #impression div article > img {
 }
 
 main > #match {
-  padding: var(--padding-sections);
+  padding: var(--mobile-sections);
   background-color: white;
   width: 100vw;
 }
@@ -206,18 +221,26 @@ main > #match {
 @media screen and (min-width: 40em) {
   main > #match {
     -webkit-clip-path: polygon(1px 100%,100% 40em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
 @media screen and (min-width: 80em) {
   main > #match {
     -webkit-clip-path: polygon(1px 100%,100% 40em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
 main > #werkwijze {
-  padding: var(--padding-sections);
+  padding: var(--mobile-sections);
   width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  main > #werkwijze {
+    padding: var(--padding-sections);
+  }
 }
 
 a {
@@ -232,7 +255,7 @@ a:focus {
 }
 /* footer */
 #Testimonials {
-  padding: var(--padding-sections);
+  padding: var(--mobile-sections);
   background-color: white;
   width: 100vw;
 }
@@ -240,21 +263,71 @@ a:focus {
 @media screen and (min-width: 40em) {
   #Testimonials {
     -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
 @media screen and (min-width: 70em) {
   #Testimonials {
     -webkit-clip-path: polygon(1px 100%,100% 35em,100% 1px,0px 5em);
+    padding: var(--padding-sections);
   }
 }
 
+/*  dingen */
+
+#Testimonials div > ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+#Testimonials div ul > li {
+  margin-left: 4em;
+  margin-bottom: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+#Testimonials div ul li > span {
+
+
+}
+
+@media screen and (min-width: 70em) {
+
+  #Testimonials div > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  #Testimonials div ul > li {
+    margin-left: 4em;
+    margin-bottom: 2em;
+    text-align: center;
+    align-items: center;
+  }
+
+  #Testimonials div ul li > span {
+    padding-top: 1em;
+    font-family: anon-bold;
+    font-size: 8em;
+    display: block;
+  }
+}
+
+
+
+/* Aanmeld form */
+
 #Aanmelden {
-  padding: var(--padding-sections);
+  padding: var(--mobile-sections);
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  margin-bottom: 4em;
 }
 
 #Aanmelden > form {
@@ -263,96 +336,24 @@ a:focus {
   align-items: center;
 }
 
-
-/* lesprogramma */
-
-
-main > #diagram {
-  display: flex;
-  justify-content: space-between;
-  padding: 6em 0 6em 4em;
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #diagram {
-    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+@media screen and (min-width: 40em){
+  #Aanmelden {
+    padding: var(--padding-sections);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
-@media screen and (min-width: 70em) {
-  main > #diagram {
-    -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
+@media screen and (min-width: 70em){
+  #Aanmelden {
+    padding: var(--padding-sections);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
-}
-
-#diagram div > p {
-  margin-right: 8em;
-  padding-top: 3em;
-  opacity: 0;
-  transition: opacity .5s ease-in;
-}
-
-/* lesprogramma - Uitleg */
-
-#courses {
-  padding: var(--padding-sections);
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  padding: 6em 0 6em 4em;
-  width: 100vw;
-}
-
-ul > h2 {
-  margin-bottom: 2em;
-}
-
-#courses > ul, #diagram > ul {
-  list-style: none;
-}
-
-#courses div > p {
-    margin-right: 8em;
-    padding-top: 3em;
-    opacity: 0;
-    transition: opacity .5s ease-in;
-}
-
-[tabindex="0"]:focus {
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 60px;
-  background-color: black;
-  color: var(--main-color);
-  padding: .5em;
-  outline: none;
-}
-
-
-/* lesprogramma - Toelatingseisen */
-
-#requirements {
-  padding: var(--padding-sections);
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  #requirements {
-    -webkit-clip-path: polygon(1px 100%,100% 27em,100% 1px,0px 5em);
-  }
-}
-
-@media screen and (min-width: 70em) {
-  #requirements {
-    -webkit-clip-path: polygon(1px 100%,100% 24em,100% 1px,0px 5em);
-  }
-}
-
-#application {
-  padding: var(--padding-sections);
 }
 
 form {
@@ -360,17 +361,28 @@ form {
   flex-direction: column;
   transition: all .5s;
   padding: 1em;
-  width: 30%;
 }
 
 input {
-  border-color:#000;
-  padding:.25em;
+  /* border-color:#000; */
+  /* padding:.25em; */
   font-size: 1.25em;
   margin-bottom: 1em;
-  width:100%;
+  width:10em;
   transition:all .2s;
-  z-index:2;
+  /* z-index: 2; */
+}
+
+@media screen and (min-width: 40em){
+  input {
+    border-color:#000;
+    padding:.25em;
+    font-size: 1.25em;
+    margin-bottom: 1em;
+    width:100%;
+    transition:all .2s;
+    z-index: 2;
+  }
 }
 
 input[type="text"] {
@@ -378,10 +390,11 @@ input[type="text"] {
 }
 
 input:valid {
-  border-color:green;
+  border: green solid;
 }
+
 input:invalid {
-  border-color:MediumVioletRed;
+  border-color: MediumVioletRed solid;
   background: LightPink;
 }
 
@@ -420,6 +433,119 @@ button:focus {
 
 
 
+
+
+/* lesprogramma */
+
+
+main > #diagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6em 0 6em 4em;
+  background-color: white;
+  width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  main > #diagram {
+    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  main > #diagram {
+    -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#diagram div > p {
+  margin-right: 8em;
+  padding-top: 3em;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+/* lesprogramma - Uitleg */
+
+#courses {
+  padding: var(--padding-sections);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6em 0 6em 4em;
+  width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  main > #courses {
+    -webkit-clip-path: polygon(1px 100%,100% 30em,100% 1px,0px 5em);
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  main > #courses {
+    -webkit-clip-path: polygon(1px 100%,100% 33em,100% 1px,0px 5em);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+ul > h2 {
+  margin-bottom: 2em;
+}
+
+#courses > ul, #diagram > ul {
+  list-style: none;
+}
+
+#courses div > p {
+    margin-right: 8em;
+    padding-top: 3em;
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+
+[tabindex="0"]:focus, [tabindex="0"]:hover {
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 60px;
+  background-color: black;
+  color: var(--main-color);
+  padding: .5em;
+  outline: none;
+}
+
+
+/* lesprogramma - Toelatingseisen */
+
+#requirements {
+  padding: var(--padding-sections);
+  background-color: white;
+  width: 100vw;
+}
+
+@media screen and (min-width: 40em) {
+  #requirements {
+    -webkit-clip-path: polygon(1px 100%,100% 27em,100% 1px,0px 5em);
+  }
+}
+
+@media screen and (min-width: 70em) {
+  #requirements {
+    -webkit-clip-path: polygon(1px 100%,100% 24em,100% 1px,0px 5em);
+  }
+}
+
+#application {
+  padding: var(--padding-sections);
+}
+
+
 /* detail, abbr */
 
 details > p {
@@ -430,18 +556,4 @@ details > p {
 details[open] > p {
   opacity: 1;
   transition: opacity 1s ease 1s;
-}
-
-
-/*  dingen */
-
-#Testimonials {
-  display: flex;
-  flex-direction: row;
-}
-
-#Testimonials div:last-of-type > h2 {
-  padding-left: 1em;
-  font-size: 10em;
-  margin-bottom: 0;
 }
