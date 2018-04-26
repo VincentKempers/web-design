@@ -89,3 +89,55 @@ Required to join the Minor.
 - [x] Know where you can subscribe.
 
 > Marijn Meijles (?) is a developer with a great mind. His disability is makes it hard for him to make precise movements. So he navigate websites with his keyboard (_spacebar_). The navigation inside a website is mostly hard to do on the web. Marijn would love to know what the minor web development have made and what it's like to be in this minor. It should be a pleasurable experience.
+
+
+## Design changes
+
+These are the changes i made to the design.
+
+Because of my user case is an actual person I could "spar" with him about what makes a good website for a minor. Not every conversation has been documented. But i made drastic changes in design style.
+
+<details><summary>Changed design</summary>
+  <img align="center" src="assets/oud-mobile-design.png">
+
+  _I kept a close connection with my user the visual interface designer Nick Groen. He have seen this design and told me it was very boring. So i had to change this design because it was very boring._
+
+
+  <img align="center" src="assets/mobile-design-now.png">
+  <br/>
+  _On mobile you couldn't do diagonal lines (any good). So i kept de design on mobile simple but made use of patterns._
+</details>
+
+<br/>
+
+<details><summary>Changed desktop design</summary>
+  <img align="center" src="assets/old-design.png">
+  _This wasn't the first "old" design this was probably 0.0.2 I started testing with diagonal lines and wanted it to be very "out there"._
+
+  <img align="center" src="assets/now-desktop-design.png">
+  _With enhancing of the diagonal lines and the patterns it had a nice look to it. This is made it a little more nerdy and a bit more "our" style._
+</details>
+
+
+
+## Interface principle
+
+:eyes:
+
+
+## user tests
+
+![Nick Groen video](assets/nick-groen-video.png)
+[Watch the Nick Groen user test video](https://vimeo.com/266642811)
+
+### Nick
+On content wise Nick wasn't really pleased. There was a lot of text and as a designer (as he put it) Less text more visual! Do more! Show more! I think i failed that on this part. The functional part of this design was focused on a fake terminal that didn't really work.
+
+
+![Marijn video](assets/marijn-video.png)
+[Watch the Marijn user test video](https://vimeo.com/266642919)
+
+### Marijn
+##### Well, he didn't navigate with the tab...
+
+So he uses the spacebar that functions as a "page down" I really couldn't fix the experience for him with the spacebar. What i could have done is probably let him navigate through every section via spacebar (an guided tour).  

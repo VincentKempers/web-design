@@ -101,11 +101,11 @@ nav ul {
 }
 
 
-@media screen and (min-width: 70em) {
+@media screen and (min-width: 40em) {
   nav ul {
      display: flex;
      flex-direction: row;
-     justify-content: center;
+     justify-content: flex-end;
      list-style: none;
      align-items: center;
      margin-top: 2em;
@@ -459,9 +459,6 @@ button:focus {
   background-color: black;
   color: var(--main-color);
 }
-
-
-
 
 
 /* lesprogramma */
