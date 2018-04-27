@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>lesprogramma</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lesprogramma.html">Lesprogramma</a></li>
+      <li><a href="#">Aanmelden</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Lesprogramma</h1>
+    <p>Wat staat er te wachten voor jou?</p>
+  </header>
+  <main>
+    <section id="diagram">
+      <ul id="list-course-1">
+        <h2 tabindex="0">Blok 3</h2>
+        <li tabindex="0">CSS to the rescue</li>
+        <li tabindex="0">Web app from scratch</li>
+        <li tabindex="0">Project 1</li>
+        <li tabindex="0">Browser Technologies</li>
+        <li tabindex="0">Performance Matters</li>
+        <li tabindex="0">project 2</li>
+      </ul>
+      <div class="newtext">
+        <p id="show-text-1"></p>
+      </div>
+    </section>
+    <section id="courses">
+        <ul id="list-course-2">
+          <h2 tabindex="0">Lesprogramma</h2>
+          <li tabindex="0">Real-Time Web</li>
+          <li tabindex="0">Web of Things</li>
+          <li tabindex="0">Project 3</li>
+          <li tabindex="0">Meesterproef</li>
+        </ul>
+        <div>
+          <p id="show-text-2"></p>
+        </div>
+    </section>
+
+  </main>
+  <footer>
+      <section id="Testimonials">
+        <div>
+        <h2 tabindex="0">Studenten gaven deze minor</h2>
+        <ul>
+            <li>Studenten Enquete <br/> <span>8,7</span> </li>
+            <li>Rooster en faciliteiten <br/> <span>8,3</span></li>
+            <li>aan de stelling "Ik ben binnen de minor uitgedaagd” <br/> <span>9,5</span> </li>
+            <li>Voor de docenten, feedback en begeleiding <br /> <span>9,0</span></li>
+        </ul>
+
+        <!-- <pre>
+                    /((((((\\\\
+            =======((((((((((\\\\\
+                 ((           \\\\\\\
+                 ( (*    _/      \\\\\\\
+                   \    /  \      \\\\\\________________
+                    |  |   |       &lt; \                  ((\\\\
+                    o_|   /        /                      \ \\\\    \\\\\\\
+                         |  ._    (                        \ \\\\\\\\\\\\\\\\
+                         | /                       /       /    \\\\\\\     \\
+                 .______/\/     /                 /       /         \\\
+                / __.____/    _/         ________(       /\
+               / / / ________/`---------'         \     /  \_
+              / /  \ \                             \   \ \_  \
+             ( &lt;    \ \                             &gt;  /    \ \
+              \/      \\_                          / /       &gt; )
+                       \_|                        / /       / /
+                                                _//       _//
+                                               /_|       /_|
+
+                  </pre> -->
+        </div>
+      </section>
+
+      <!-- method="post"   -->
+      <section id="Aanmelden">
+        <div>
+            <h2 tabindex="0">Aanmelden</h2>
+            <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
+            <p>Je kan je interesse aangeven door een mail te sturen naar
+                <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
+        </div>
+        <form action="index.html">
+
+        <label for="field-email">Email</label>
+        <input type="email" id="field-email" name="field-email" autocomplete="email" placeholder="voornaam.achternaam@hva.nl" required="">
+
+        <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
+        <input type="textarea" id="field-text" required="">
+
+        <button type="submit">Verstuur</button>
+
+      </form>
+      </section>
+  </footer>
+  <script type="text/javascript">
+  var blokdrie = [{
+    course: "CSS to the rescue",
+    text: "In dit vak gaan we aan de slag met CSS. We gaan goed werkende responsive oplossingen bedenken én maken voor complexe interfaces. Dat is erg belangrijk, te veel ontwerpers kunnen dit niet zo goed. Het is ook belangrijk om een aantal basisprincipes achter CSS goed te begrijpen. Niet alleen op praktisch niveau, ook op experimenteel niveau. Zonder goed begrip van de basisprincipes is CSS magisch en weird. Met een goed begrip heb je CSS onder controle en kan je het laten doen wat jij wil. En dat is nodig om webpagina’s vorm te geven met attention to detail. Webpagina’s waar mensen blij van worden."
+  },{
+    course: "Web app from scratch",
+    text: "In dit vak gaan we een web app maken zonder frameworks of onnodige libraries, dus zoveel mogelijk met native HTML, CSS & JavaScript. Het eindproduct is een modulair opgezet prototype voor een single page web app. Data wordt opgehaald uit een externe API, waar nodig gemanipuleerd en vervolgens getoond in de Web App. Je leert hoe je structuur aanbrengt in je code en hoe je hiermee 'from scratch' een (prototype voor een) web app maakt. Met deze kennis begrijp je daarnaast beter hoe bestaande api’s, libraries en frameworks werken."
+  },{
+    course:"Project 1",
+    text: `Een case waarin je gaat toepassen wat je bij de vakken Webapp from Scratch en CSS To The Rescue hebt geleerd.<br/> Opdrachtgever: <a href="www.funda.nl">Funda</a>`
+  },{
+    course:"Browser Technologies",
+    text: `Een van de mooiste principes van het web is dat het er echt is voor iedereen. Iedereen met een computer en een browser moet gebruik kunnen maken van het web. Het web is geen gecontroleerde (programmeer) omgeving. Je kan er gerust van uit gaan dat niemand precies hetzelfde te zien krijgt als wat jij ziet in jouw browser. Er zijn natuurlijk de technische beperkingen. Zoals - Afmetingen van de browser - Grootte van het apparaat - Manier van interactie - Kwaliteit van de hardware - Kwaliteit van het netwerk. En er zijn mensen. Allemaal verschillende mensen … <br/> In het vak Browser Technologies leer je hoe je goede, robuuste, toegankelijke websites maakt. Je gaat leren over Progressive Enhancement, Feature Detection en Fallback. Het web is er voor iedereen. In dit vak leer je hoe je daarvoor kan zorgen.`
+  }, {
+    course: "Performance Matters",
+    text: `In het vak Performance Matters gaan we van bestaande web applicaties de performance verbeteren. We werken aan HTML, CSS en JavaScript optimalistaties en hoe we het HTTP protocol beter kunnen benutten. <br/> Onder andere de Service Worker (als onderdeel van Progressive Web Apps) wordt ingezet om de performance van applicaties te verbeteren, maar ook om offline gebruik van de applicaties mogelijk te maken.`
+  }, {
+    course: "project 2",
+    text: `Case waarin je gaat toepassen wat je bij de vakken Performance Maters en Brower technologies hebt geleerd. <br/> Opdrachtgever: <a href="https://lifely.nl/">Lifely</a>`
+  }
+];
+
+var blokvier = [{
+  course: "Real-Time Web",
+  text: "In het vak Real-Time Web leer je hoe je real-time / live data op een inzichtelijke manier toegankelijk kunt maken. Terwijl je bij het vak ‘Web of Things’ leert hoe je sensor data uit “slimme” devices kunt lezen en deze devices zelfs kunt aansturen, ga je bij RTW precies dit soort data real-time inzichtelijk en toegankelijk maken voor eindgebruikers."
+},{
+  course: "Web of Things",
+  text: "WoT (Web of Things / Internet of Things) is een uitdagend nieuw veld voor de CMD'er; meer en meer diensten maken gebruik van een diversiteit aan connected devices voor een goede UX. In het vak Web of Things bouwt elke student zijn/haar eigen connected device waarmee (stand-alone of als sensornetwerk) data gegenereerd en op het web gepubliceerd kan worden, en andersom ook aangestuurd kan worden vanaf het web."
+},{
+  course:"Project 3",
+  text: `Case waarin je gaat toepassen wat je bij de vakken Real-time web en Web of things hebt geleerd.`
+},{
+  course:"Meesterproef",
+  text: `In de meesterproef laten studenten zien wat ze allemaal hebben geleerd. Er worden een aantal projecten (voor echte opdrachtgevers) aangeboden waar studenten in 5 weken een oplossing voor een probleem moeten verzinnen en maken.`
+}
+];
+
+  var allCourses = document.getElementById("list-course-1").children;
+  var textStuff = document.getElementById("show-text-1");
+  console.log(allCourses)
+
+  for (var i = 0; i < allCourses.length; i++) {
+    console.log(allCourses[i].innerHTML);
+    allCourses[i].addEventListener('mouseover',(event) => {
+      for (var i = 0; i < blokdrie.length; i++) {
+      if (event.target.innerHTML === blokdrie[i].course ) {
+        textStuff.style.opacity = 1;
+        textStuff.innerHTML = blokdrie[i].text;
+      } else {
+        console.log('not vince');
+      }
+    }
+    },true);
+  }
+
+  var allCoursesfour = document.getElementById("list-course-2").children;
+  var textStufffour = document.getElementById("show-text-2");
+  console.log(allCoursesfour)
+
+  for (var i = 0; i < allCoursesfour.length; i++) {
+    console.log(allCoursesfour[i].innerHTML);
+    allCoursesfour[i].addEventListener('mouseover',(event) => {
+      for (var i = 0; i < blokvier.length; i++) {
+      if (event.target.innerHTML === blokvier[i].course ) {
+        textStufffour.style.opacity = 1;
+        textStufffour.innerHTML = blokvier[i].text;
+      } else {
+        console.log('not vince');
+      }
+    }
+    },true);
+  }
+  </script>
+</body>
+</html>
