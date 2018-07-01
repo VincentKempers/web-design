@@ -141,3 +141,8 @@ On content wise Nick wasn't really pleased. There was a lot of text and as a des
 ##### Well, he didn't navigate with the tab...
 
 So he uses the spacebar that functions as a "page down" I really couldn't fix the experience for him with the spacebar. What i could have done is probably let him navigate through every section via spacebar (an guided tour).  
+
+
+### Changes I need to make to give Marijn the TOP experience
+
+- [ ] 
