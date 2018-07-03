@@ -46,7 +46,7 @@ I really want to challenge myself to please the new students and make it so plea
 
 #### Requirements
 **Main:** I see requirements and is this minor for you as one thing!
-Required to join the Minor.
+Required to join the Minor.?
 - HTML
 - CSS
 - Javascript
@@ -140,4 +140,4 @@ On content wise Nick wasn't really pleased. There was a lot of text and as a des
 ### Marijn
 ##### Well, he didn't navigate with the tab...
 
-So he uses the spacebar that functions as a "page down" I really couldn't fix the experience for him with the spacebar. What i could have done is probably let him navigate through every section via spacebar (an guided tour).  
+So he uses the spacebar that functions as a "page down" I really couldn't fix the experience for him with the spacebar. What i could have done is probably let him navigate through every section via spacebar (an guided tour).
