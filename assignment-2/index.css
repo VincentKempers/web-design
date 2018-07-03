@@ -1,13 +1,18 @@
-/* VARIABLES */
-
 :root {
   --main-color: rgba(248, 204, 70, 1);
   --padding-sections: 6em 0 6em 4em;
   --mobile-sections: 2em;
 }
 
-::-webkit-scrollbar {
-  display: none;
+/* animations */
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 
 /* FONTS */
@@ -37,29 +42,10 @@
   src: url("fonts/AnonymousPro-Bold.ttf");
 }
 
-/* ANIMATIONS */
-
-/* declaring global things */
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--main-color);
-  background-image: url("imgs/pattern.png");
-  background-repeat: repeat;
-  background-blend-mode: color-burn;
-}
-
-#background-style {
-  width: 100%;
-  height: 100%;
-  background-color: black;
 }
 
 h1,
@@ -69,28 +55,8 @@ h4,
 h5,
 h6 {
   font-family: poppins-regular;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
-}
-
-@media screen and (min-width: 70em) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    width: 9em;
-  }
-}
-
-h2:focus,
-h3:focus,
-h2:hover,
-h3:hover {
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 p,
@@ -106,492 +72,75 @@ abbr {
   letter-spacing: -0.8px;
 }
 
-/* navigation */
+nav {
+  position: absolute;
+  right: 0;
+}
 
 nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   list-style: none;
   align-items: center;
   margin-top: 2em;
+  background-position: 0px 0px;
+  animation: animatedBackground 1s linear infinite;
+}
+nav ul li {
+  padding-right: 2em;
 }
 
-@media screen and (min-width: 40em) {
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    list-style: none;
-    align-items: center;
-    margin-top: 2em;
-  }
-
-  nav ul > li {
-    margin-right: 2em;
-  }
-}
-
-nav ul li > a {
+nav ul li a {
   text-decoration: none;
-  background-color: none;
-  color: black;
-  padding: 0.5em;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
-}
-
-nav ul li:last-of-type > a {
-  border: 2px solid;
-  padding: 0.8em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 1em 1em 1em 0;
-}
-
-nav ul li > a:focus,
-nav ul li > a:hover {
+  color: white;
   background-color: black;
-  color: var(--main-color);
-  padding: 0.5em;
+  padding: 0.5em 1em;
 }
 
-nav ul li:last-of-type > a:focus,
-nav ul li:last-of-type > a:hover {
-  background-color: black;
-  color: var(--main-color);
-  padding: 0.8em;
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: black solid 1px;
+  transition: all 1s ease-in;
 }
-
-@media screen and (min-width: 40em) {
-  nav ul li:last-of-type > a {
-    position: inherit;
-    bottom: none;
-    margin: 0 2em 0 0;
-  }
-
-  nav ul li:last-of-type > a:focus,
-  nav ul li:last-of-type > a:hover {
-    position: inherit;
-    bottom: none;
-    color: var(--main-color);
-    background-color: black;
-    margin: 0 2em 0 0;
-  }
-}
-
-nav ul li:last-child > a {
-  font-family: open-sans-bold, sans-serif;
-  color: black;
-}
-
-/* header styling */
 
 header {
-  padding-left: 2em;
-}
-
-@media screen and (min-width: 40em) {
-  header {
-    padding-left: 4em;
-  }
-}
-
-main {
-  margin: 0;
-}
-
-/* main content */
-
-main > #intro {
-  padding: var(--mobile-sections);
-  background-color: white;
+  height: 100vh;
   width: 100vw;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("imgs/pattern.png");
+  background-blend-mode: color-burn;
+  background-repeat: repeat;
 }
 
-@media screen and (min-width: 40em) {
-  main > #intro {
-    -webkit-clip-path: polygon(1px 100%, 100% 30em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-@media screen and (min-width: 70em) {
-  main > #intro {
-    -webkit-clip-path: polygon(1px 100%, 100% 33em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-main > #impression {
-  padding: var(--mobile-sections);
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #impression {
-    padding: var(--padding-sections);
-    width: 100vw;
-  }
-}
-
-main #impression > div {
-  margin-left: -2em;
+header ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
 }
 
-main #impression div article > h3 {
-  display: none;
+header ul > li {
+  margin: 2em;
+}
+
+header ul li > a {
+  padding: 0.5em 2rem;
+  background-color: black;
+  border-radius: 1em;
+}
+
+header ul li a > button {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 1em;
 }
 
 main #impression div article > img {
   width: 30em;
   padding-right: 2em;
   height: auto;
-}
-
-main > #match {
-  padding: var(--mobile-sections);
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #match {
-    -webkit-clip-path: polygon(1px 100%, 100% 40em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-@media screen and (min-width: 80em) {
-  main > #match {
-    -webkit-clip-path: polygon(1px 100%, 100% 40em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-main > #werkwijze {
-  padding: var(--mobile-sections);
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #werkwijze {
-    padding: var(--padding-sections);
-  }
-}
-
-a {
-  transition: all 0.1s cubic-bezier(0.95, 0.05, 0.8, 0.04);
-}
-
-a:focus {
-  background-color: black;
-  color: var(--main-color);
-  padding: 0.5em;
-  margin: 0.3em;
-}
-/* footer */
-#Testimonials {
-  padding: var(--mobile-sections);
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  #Testimonials {
-    -webkit-clip-path: polygon(1px 100%, 100% 30em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-@media screen and (min-width: 70em) {
-  #Testimonials {
-    -webkit-clip-path: polygon(1px 100%, 100% 35em, 100% 1px, 0px 5em);
-    padding: var(--padding-sections);
-  }
-}
-
-/*  dingen */
-
-#Testimonials div > ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#Testimonials div ul > li {
-  margin-bottom: 3em;
-  align-items: center;
-  font-size: 1.2em;
-}
-
-#Testimonials div ul li > span {
-  font-size: 4em;
-  font-family: anon-bold;
-  padding-top: 0.6em;
-  display: block;
-}
-
-@media screen and (min-width: 70em) {
-  #Testimonials div > ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-  }
-
-  #Testimonials div ul > li {
-    margin-left: 2em;
-    margin-bottom: 2em;
-    text-align: center;
-    align-items: center;
-  }
-
-  #Testimonials div ul li > span {
-    padding-top: 1em;
-    font-family: anon-bold;
-    font-size: 5em;
-    display: block;
-  }
-}
-
-/* Aanmeld form */
-
-#Aanmelden {
-  padding: var(--mobile-sections);
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-bottom: 4em;
-}
-
-#Aanmelden > form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@media screen and (min-width: 40em) {
-  #Aanmelden {
-    padding: var(--padding-sections);
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-@media screen and (min-width: 70em) {
-  #Aanmelden {
-    padding: var(--padding-sections);
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s;
-  padding: 1em;
-}
-
-input {
-  /* border-color:#000; */
-  /* padding:.25em; */
-  font-size: 1.25em;
-  margin-bottom: 1em;
-  width: 10em;
-  transition: all 0.2s;
-  /* z-index: 2; */
-}
-
-@media screen and (min-width: 40em) {
-  input {
-    border-color: #000;
-    padding: 0.25em;
-    font-size: 1.25em;
-    margin-bottom: 1em;
-    width: 100%;
-    transition: all 0.2s;
-    z-index: 2;
-  }
-}
-
-input[type="text"] {
-  height: 2em;
-}
-
-input:valid {
-  border: green solid;
-}
-
-input:invalid {
-  border-color: MediumVioletRed solid;
-  background: LightPink;
-}
-
-input:focus {
-  transform: scale(1.01, 1.01);
-}
-
-input:disabled {
-  border-color: #eee;
-  background-color: #f9f9f9;
-}
-
-input::placeholder {
-  color: rgba(0, 0, 0, 0.25);
-  font-style: italic;
-}
-
-form button {
-  font-size: 1.25em;
-  flex: 0 0 2em;
-  transition: all 0.2s;
-  opacity: 0.3;
-  width: 6em;
-  border: none;
-}
-
-form:valid button {
-  opacity: 1;
-}
-
-button:focus {
-  transform: scale(1.1, 1.1);
-  background-color: black;
-  color: var(--main-color);
-}
-
-/* lesprogramma */
-
-main > #diagram {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 6em 0 6em 4em;
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #diagram {
-    -webkit-clip-path: polygon(1px 100%, 100% 30em, 100% 1px, 0px 5em);
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 70em) {
-  main > #diagram {
-    -webkit-clip-path: polygon(1px 100%, 100% 33em, 100% 1px, 0px 5em);
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-#diagram div > p {
-  margin-right: 8em;
-  padding-top: 3em;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-/* lesprogramma - Uitleg */
-
-#courses {
-  padding: var(--padding-sections);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 6em 0 6em 4em;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  main > #courses {
-    -webkit-clip-path: polygon(1px 100%, 100% 30em, 100% 1px, 0px 5em);
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 70em) {
-  main > #courses {
-    -webkit-clip-path: polygon(1px 100%, 100% 33em, 100% 1px, 0px 5em);
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-ul > h2 {
-  margin-bottom: 2em;
-}
-
-section > h2 {
-  padding: 0.5em !important;
-}
-
-#courses > ul,
-#diagram > ul {
-  list-style: none;
-}
-
-#courses div > p {
-  margin-right: 8em;
-  padding-top: 3em;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-[tabindex="0"]:focus,
-[tabindex="0"]:hover {
-  background-color: black;
-  color: var(--main-color);
-  padding: 0.5em;
-  outline: none;
-}
-
-/* lesprogramma - Toelatingseisen */
-
-#requirements {
-  padding: var(--padding-sections);
-  background-color: white;
-  width: 100vw;
-}
-
-@media screen and (min-width: 40em) {
-  #requirements {
-    -webkit-clip-path: polygon(1px 100%, 100% 27em, 100% 1px, 0px 5em);
-  }
-}
-
-@media screen and (min-width: 70em) {
-  #requirements {
-    -webkit-clip-path: polygon(1px 100%, 100% 24em, 100% 1px, 0px 5em);
-  }
-}
-
-#application {
-  padding: var(--padding-sections);
-}
-
-/* detail, abbr */
-
-details > p {
-  padding-left: 3em;
-  opacity: 0;
-}
-
-details[open] > p {
-  opacity: 1;
-  transition: opacity 1s ease 1s;
 }
