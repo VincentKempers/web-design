@@ -42,6 +42,38 @@
   src: url("fonts/AnonymousPro-Bold.ttf");
 }
 
+/* buttons */
+
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blue {
+  background-color: #39393a;
+  border-bottom: 5px solid #1e1e1f;
+  text-shadow: 0px -2px #1e1e1f;
+}
+
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid;
+}
+
+/* actual css */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,16 +123,17 @@ nav ul li {
 }
 
 nav ul li a {
+  font-size: 1em;
+  color: #fff;
   text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 0.5em 1em;
 }
 
 nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-bottom: black solid 1px;
-  transition: all 1s ease-in;
+  color: #000;
+}
+nav ul li a:hover {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
 }
 
 header {
@@ -129,11 +162,24 @@ header ul > li {
 header ul li > a {
   padding: 0.5em 2rem;
   background-color: black;
+  box-shadow: rgb(75, 75, 75) 0px 5px 0px 0px;
   border-radius: 1em;
+}
+
+/* header ul li > a:hover {
+  box-shadow: rgb(75, 75, 75) 0px 2px 0px 0px;
+  transition: all .3s ease-in;
+} */
+
+header ul li > a:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
 }
 
 header ul li a > button {
   background-color: black;
+
   border: none;
   color: white;
   font-size: 1em;
