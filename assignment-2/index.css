@@ -130,8 +130,6 @@ nav ul li a {
 
 nav ul li > a:hover {
   animation: borderAnimation 0.3s ease-in;
-  animation: borderAnimation duration timing-function delay iteration-count
-    direction fill-mode;
 }
 
 /* header */
@@ -185,36 +183,24 @@ main #impression div article > img {
   height: auto;
 }
 
+/* standard section page */
+
 .section-page {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* section page basic styling */
 
 .section-page > article {
   max-width: 20em;
   margin-bottom: 2em;
 }
 
-.faq {
-  margin: 0 2em;
-}
-
-.faq details {
-  background-color: grey;
-  padding-bottom: 0.6em;
-  margin-bottom: 1em;
-  padding: 0.5em;
-}
-
-.faq details > p {
-  background-color: white;
-  margin: 0.3em;
-  padding: 0.6em;
-}
+/* avatar */
 
 .avatar-response {
-  margin: 0 2em;
+  margin: 3em 2em;
 }
 
 .avatar-response > .avatar {
@@ -234,16 +220,38 @@ main #impression div article > img {
   margin: 0.4em;
 }
 
-#border {
+/* border */
+
+.border {
   width: 10em;
-  /* margin: 5em 2em; */
+  margin: 3em 4em;
   border-bottom: 0.5em solid black;
 }
-
-#match > div:nth-last-child() {
-  outline: red solid 1px;
+/* ??? */
+#match div:nth-child(3) details > summary {
+  font-size: 1.2em;
 }
 
-#match div:nth-child(3) details > summary {
-  font-size: 1.3em;
+/* unique faq */
+
+.faq {
+  margin: 0 2em;
+}
+
+.faq details {
+  background-color: grey;
+  padding-bottom: 0.6em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.faq details > p {
+  background-color: white;
+  margin: 0.3em;
+  padding: 0.6em;
+}
+
+#intro,
+#aanmeld-modal {
+  background-color: var(--main-color);
 }
