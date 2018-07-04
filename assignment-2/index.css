@@ -174,7 +174,6 @@ header ul li > a:active {
 
 header ul li a > button {
   background-color: black;
-
   border: none;
   color: white;
   font-size: 1em;
@@ -186,19 +185,59 @@ main #impression div article > img {
   height: auto;
 }
 
-#match {
-  width: 100vw;
-  height: 100vh;
+.section-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.section-page > article {
+  max-width: 20em;
+  margin-bottom: 2em;
+}
+
+.faq {
+  margin: 0 2em;
+}
+
+.faq details {
+  background-color: grey;
+  padding-bottom: 0.6em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.faq details > p {
+  background-color: white;
+  margin: 0.3em;
+  padding: 0.6em;
+}
+
+.avatar-response {
+  margin: 0 2em;
+}
+
+.avatar-response > .avatar {
+  background-image: url(imgs/vincent.png);
+  background-repeat: no-repeat;
+  background-position: 44%;
+  background-size: 4em;
+  border: 2px solid var(--main-color);
+  border-radius: 4em;
+  width: 3em;
+  height: 3em;
+}
+
+.avatar-response > p {
+  background-color: var(--main-color);
+  padding: 0.5em;
+  margin: 0.4em;
 }
 
 #border {
-  height: 20em;
-  margin: 5em 2em;
-  border-left: 0.5em solid black;
+  width: 10em;
+  /* margin: 5em 2em; */
+  border-bottom: 0.5em solid black;
 }
 
 #match > div:nth-last-child() {
