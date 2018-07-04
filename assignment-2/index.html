@@ -206,15 +206,15 @@
         <p>Je kan je interesse aangeven door een mail te sturen naar
           <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
       </article>
-      <form action="index.html">
-
-        <label for="field-email">Email</label>
-        <input type="email" id="field-email" name="field-email" autocomplete="email" placeholder="voornaam.achternaam@hva.nl" required="">
+      <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
 
         <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
-        <input type="textarea" id="field-text" required="">
+        <textarea name="reason" cols="30" rows="10"></textarea>
 
-        <button type="submit">Verstuur</button>
+        <label for="name">Jouw naam</label>
+        <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
+
+        <button type="submit" class="action-button shadow animate blue">Verstuur</button>
 
       </form>
     </section>

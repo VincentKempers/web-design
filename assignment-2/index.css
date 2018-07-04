@@ -45,8 +45,8 @@
 /* buttons */
 
 .animate {
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
 }
 
 .action-button {
@@ -54,6 +54,7 @@
   padding: 10px 40px;
   margin: 0px 10px 10px 0px;
   float: left;
+  border: none;
   border-radius: 10px;
   font-size: 25px;
   color: #fff;
@@ -193,8 +194,8 @@ main #impression div article > img {
 /* section page basic styling */
 
 .section-page > article {
-  max-width: 20em;
-  margin-bottom: 2em;
+  max-width: 40em;
+  margin: 2em;
 }
 
 /* avatar */
@@ -254,4 +255,46 @@ main #impression div article > img {
 #intro,
 #aanmeld-modal {
   background-color: var(--main-color);
+}
+
+/* form styling */
+
+footer section > form {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer section form > textarea {
+  background: none;
+  border: none;
+  resize: none;
+  border: 0.3em solid black;
+  margin: 1em 0;
+  padding: 0.4em;
+}
+
+footer section form > input {
+  font-family: monospace;
+  font-size: 1em;
+  font-weight: bolder;
+  border: none;
+  border-bottom: 0.3em solid black;
+  background: none;
+  margin: 1em 0 3em 0em;
+  padding: 0.4em;
+}
+
+footer form > input[type="email"]:invalid {
+  border: 0.3em solid red;
+  transition: all 0.5s ease-in;
+}
+
+footer form > input[type="email"]:valid {
+  border: 0.3em solid green;
+  transition: all 0.5s ease-in;
+}
+
+footer section form > button {
+  margin-top: 2em;
 }
