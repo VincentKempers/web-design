@@ -6,12 +6,12 @@
 
 /* animations */
 
-@keyframes animatedBackground {
+@keyframes borderAnimation {
   from {
-    background-position: 0 0;
+    border-bottom: 0px solid black;
   }
   to {
-    background-position: 100% 0;
+    border-bottom: 1em solid black;
   }
 }
 
@@ -116,7 +116,6 @@ nav ul {
   align-items: center;
   margin-top: 2em;
   background-position: 0px 0px;
-  animation: animatedBackground 1s linear infinite;
 }
 nav ul li {
   padding-right: 2em;
@@ -126,15 +125,16 @@ nav ul li a {
   font-size: 1em;
   color: #fff;
   text-decoration: none;
+  border-bottom: 0px solid black;
 }
 
-nav ul li a:hover {
-  color: #000;
+nav ul li > a:hover {
+  animation: borderAnimation 0.3s ease-in;
+  animation: borderAnimation duration timing-function delay iteration-count
+    direction fill-mode;
 }
-nav ul li a:hover {
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-}
+
+/* header */
 
 header {
   height: 100vh;
@@ -166,11 +166,6 @@ header ul li > a {
   border-radius: 1em;
 }
 
-/* header ul li > a:hover {
-  box-shadow: rgb(75, 75, 75) 0px 2px 0px 0px;
-  transition: all .3s ease-in;
-} */
-
 header ul li > a:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
@@ -189,4 +184,27 @@ main #impression div article > img {
   width: 30em;
   padding-right: 2em;
   height: auto;
+}
+
+#match {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#border {
+  height: 20em;
+  margin: 5em 2em;
+  border-left: 0.5em solid black;
+}
+
+#match > div:nth-last-child() {
+  outline: red solid 1px;
+}
+
+#match div:nth-child(3) details > summary {
+  font-size: 1.3em;
 }
