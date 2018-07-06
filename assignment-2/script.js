@@ -1,15 +1,29 @@
-console.log('vincen');
-console.log('bruh');
+(function() {
+  const message = "this should be shown";
 
-let app = (function() {
+  let app = {
+    shownMessage: () => {
+      console.log(message);
+    },
+    toggle: id => {
+      hideElements("section");
+      showElement(id);
+    },
+    router: () => {}
+  };
 
-    const message = 'this should be shown'
+  routie("home", function() {
+    //this gets called when hash == #users
+    app.toggle(window.location.hash);
+  });
 
-    return {
-    	shownMessage: () => {
-      		console.log(message);
-    	}
-    }
+  function hideElements(selector) {
+    document.querySelectorAll(selector).forEach(function(element) {
+      element.classList.add("hidden");
+    });
+  }
+
+  function showElement(selector) {
+    document.querySelector(selector).classList.remove("hidden");
+  }
 })();
-
-app.shownMessage();
