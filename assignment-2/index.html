@@ -8,16 +8,16 @@
   <meta name="description" content="De minor Web Development van de opleiding CMD van de HvA leert je interactieve toepassingen maken met de webtechnologieën HTML, CSS en Javascript">
   <meta name="viewport" content="width=device-width, iniitial-scale=1">
   <title>Minor Web Development — CMD Amsterdam</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="static/CSS/index.css">
 
 </head>
 
 <body>
   <nav>
     <ul>
-      <li>
+      <!-- <li>
         <a href="#home">Home</a>
-      </li>
+      </li> -->
       <li>
         <a href="lesprogramma.html">Lesprogramma</a>
       </li>
@@ -26,18 +26,16 @@
       </li>
     </ul>
   </nav>
-  <header id="home">
-    <h1 lang="en">Welkom bij de Minor Webdevelopment</h1>
-    <h3 lang="en">Ben jij de designer die graag zijn werk tot leven brengt?</h3>
-    <ul>
-      <li>
-        <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
-      </li>
-    </ul>
-  </header>
-
-
   <main>
+    <section id="home">
+      <h1 lang="en">Welkom bij de Minor Webdevelopment</h1>
+      <h3 lang="en">Ben jij de designer die graag zijn werk tot leven brengt?</h3>
+      <ul>
+        <li>
+          <a href="#match" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+        </li>
+      </ul>
+    </section>
     <section class="section-page" id="match">
       <article>
         <h2 tabindex="0">Is deze minor wat voor jou?</h2>
@@ -66,10 +64,16 @@
           <summary>Is het niet super moeilijk om in te komen?</summary>
           <p>Antwoord</p>
         </details>
+
       </div>
       <div class="avatar-response">
         <p>"Het was wel een uitdaging als Visual Interface Designer, maar ik heb enorm veel geleerd!" - Yung Stunna Vinnelientje</p>
         <div class="avatar"></div>
+        <ul class="list-of-buttons">
+          <li>
+            <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="section-page" id="intro">
@@ -98,7 +102,22 @@
           <a href="http://hva.nl/">Hogeschool van Amsterdam</a>. CMD Amsterdam is een ontwerpopleiding digital design met drie focuspunten: interaction
           design, visual design en front-end development. De minor sluit aan bij het profiel Front-end developer.
         </p>
+        <ul class="list-of-buttons">
+          <li>
+            <a href="#werkwijze" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+          </li>
+        </ul>
       </article>
+    </section>
+    <section class="section-page" id="lesprogramma">
+      <h1>Lesprogramma</h1>
+      <ul>
+        <li></li>
+      </ul>
+      <div>
+        <h3 id="naam-vak"></h3>
+        <p id="uitleg-vak"></p>
+      </div>
     </section>
     <!-- 
     <section id="impression">
@@ -194,6 +213,11 @@
           via slack. Je krijgt een community gevoel." - Young Humberto Tan op de Mic</p>
         <div class="avatar"></div>
       </div>
+      <ul class="list-of-buttons">
+        <li>
+          <a href="#aanmelden" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+        </li>
+      </ul>
     </section>
     </section>
   </main>
@@ -220,8 +244,8 @@
     </section>
   </footer>
 
-  <script src="routie.js"></script>
-  <script src="script.js"></script>
+  <script src="static/JS/routie.js"></script>
+  <script src="static/JS/script.js"></script>
 </body>
 
 </html>
