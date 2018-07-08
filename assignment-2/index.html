@@ -13,68 +13,71 @@
 </head>
 
 <body>
-  <nav>
-    <ul>
-      <!-- <li>
-        <a href="#home">Home</a>
-      </li> -->
-      <li>
-        <a href="#lesprogramma">Lesprogramma</a>
-      </li>
-      <li>
-        <a href="#aanmelden">Aanmelden</a>
-      </li>
-    </ul>
-  </nav>
   <main>
     <section id="home">
+      <nav>
+        <ul class="navigation-list">
+          <!-- <li>
+                    <a href="#home">Home</a>
+                  </li> -->
+          <li>
+            <a href="#lesprogramma">Lesprogramma</a>
+          </li>
+          <li>
+            <a href="#aanmelden">Aanmelden</a>
+          </li>
+        </ul>
+      </nav>
       <h1 lang="en">Welkom bij de Minor Webdevelopment</h1>
       <h3 lang="en">Ben jij de designer die graag zijn werk tot leven brengt?</h3>
-      <ul>
+      <ul class="list-of-buttons">
         <li>
           <a href="#match" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
         </li>
       </ul>
     </section>
+
     <section class="section-page" id="match">
-      <article>
-        <h2 tabindex="0">Is deze minor wat voor jou?</h2>
-        <p>We gaan werken met verschillende webtechnologieën. Samen met bedrijven uit de creatieve industrie verkennen we de
-          grenzen van wat er mogelijk is op het web. Van studenten wordt verwacht dat ze gedegen kennis hebben van
-          <abbr>HTML</abbr>,
-          <abbr>CSS</abbr> en JavaScript. </p>
-        <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met techniek of wil je je technische
-          (design) skills verdiepen? Droom je van
-          <i lang="en">Real time</i>,
-          <i lang="en">Responsive</i> en
-          <i lang="en">Reactive</i>? Of misschien wil je dat leren? Dan is deze minor voor jou!</p>
-        <p>Deze minor is ook geschikt voor Visual Interface Designers en Interactie ontwerpers die alles willen weten over het
-          web, over toegankelijkheid, én over hoe code van invloed is op het ontwerpen en maken van websites. De lesstof
-          wordt op verschillende niveau's aangeboden, afhankelijk van de kennis en skills van de student.</p>
-      </article>
+      <div class="layout">
+        <article>
+          <h2 tabindex="0">Is deze minor wat voor jou?</h2>
+          <p>We gaan werken met verschillende webtechnologieën. Samen met bedrijven uit de creatieve industrie verkennen we
+            de grenzen van wat er mogelijk is op het web. Van studenten wordt verwacht dat ze gedegen kennis hebben van
+            <abbr>HTML</abbr>,
+            <abbr>CSS</abbr> en JavaScript. </p>
+          <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met techniek of wil je je technische
+            (design) skills verdiepen? Droom je van
+            <i lang="en">Real time</i>,
+            <i lang="en">Responsive</i> en
+            <i lang="en">Reactive</i>? Of misschien wil je dat leren? Dan is deze minor voor jou!</p>
+          <p>Deze minor is ook geschikt voor Visual Interface Designers en Interactie ontwerpers die alles willen weten over
+            het web, over toegankelijkheid, én over hoe code van invloed is op het ontwerpen en maken van websites. De lesstof
+            wordt op verschillende niveau's aangeboden, afhankelijk van de kennis en skills van de student.</p>
+        </article>
 
-      <div class="border"></div>
-      <div class="faq">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Zijn er visual interface designer die het hebben gehaald?</summary>
-          <p>Ja natúúrlijk</p>
-        </details>
-        <details>
-          <summary>Is het niet super moeilijk om in te komen?</summary>
-          <p>Antwoord</p>
-        </details>
+        <div class="border"></div>
+        <div class="faq">
+          <h2>FAQ</h2>
+          <details>
+            <summary>Zijn er visual interface designer die het hebben gehaald?</summary>
+            <p>Ja natúúrlijk</p>
+          </details>
+          <details>
+            <summary>Is het niet super moeilijk om in te komen?</summary>
+            <p>Antwoord</p>
+          </details>
 
+        </div>
       </div>
       <div class="avatar-response">
         <p>"Het was wel een uitdaging als Visual Interface Designer, maar ik heb enorm veel geleerd!" - Yung Stunna Vinnelientje</p>
         <div class="avatar"></div>
-        <ul class="list-of-buttons">
-          <li>
-            <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
-          </li>
-        </ul>
       </div>
+      <ul class="list-of-buttons">
+        <li>
+          <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+        </li>
+      </ul>
     </section>
     <section class="section-page" id="intro">
       <article>
@@ -137,7 +140,6 @@
             <div id="typed-strings" class="terminal_text">
               <h3 id="coursename">Klik op een vak 👆</h3>
               <p id="coursedescription">Voor meer informatie over het vak
-                <div></div>
               </p>
             </div>
             <span id="typed"></span>
@@ -243,7 +245,6 @@
         </li>
       </ul>
     </section>
-    </section>
   </main>
   <footer>
     <!-- method="post"   -->
@@ -263,7 +264,6 @@
         <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
 
         <button type="submit" class="action-button shadow animate blue">Verstuur</button>
-
       </form>
     </section>
   </footer>
