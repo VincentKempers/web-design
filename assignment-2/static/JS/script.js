@@ -92,6 +92,9 @@
     "home": function () {
       app.toggle(window.location.hash);
     },
+    "": function () {
+      window.location.hash = "#home";
+    },
     "match": function () {
       app.toggle(window.location.hash);
     },
@@ -104,6 +107,9 @@
     "lesprogramma": function () {
       app.toggle(window.location.hash);
     },
+    "aanmelden": function () {
+      app.toggle(window.location.hash);
+    }
   });
 
 })();
