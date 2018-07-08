@@ -113,36 +113,38 @@
       </ul>
     </section>
     <section class="section-page" id="lesprogramma">
-      <article>
-        <h1>Lesprogramma</h1>
-        <ul id="course-list">
-          <li tabindex="0">CSS to the rescue</li>
-          <li tabindex="0">Web App from Scratch</li>
-          <li tabindex="0">Project 1</li>
-          <li tabindex="0">Browser Technologies</li>
-          <li tabindex="0">Performance Matters</li>
-          <li tabindex="0">Project 2</li>
-          <li tabindex="0">Real-Time Web</li>
-          <li tabindex="0">Web Design</li>
-          <li tabindex="0">Project 3</li>
-          <li tabindex="0">Meesterproef</li>
-        </ul>
-      </article>
-      <div class="border"></div>
-      <div clas="terminal">
-        <div class="terminal-window">
-          <header>
-            <div class="red clr-button"></div>
-            <div class="green clr-button"></div>
-            <div class="yellow clr-button"></div>
-          </header>
+      <div class="page-with-response">
+        <article>
+          <h1>Lesprogramma</h1>
+          <ul id="course-list">
+            <li tabindex="0">CSS to the rescue</li>
+            <li tabindex="0">Web App from Scratch</li>
+            <li tabindex="0">Project 1</li>
+            <li tabindex="0">Browser Technologies</li>
+            <li tabindex="0">Performance Matters</li>
+            <li tabindex="0">Project 2</li>
+            <li tabindex="0">Real-Time Web</li>
+            <li tabindex="0">Web Design</li>
+            <li tabindex="0">Project 3</li>
+            <li tabindex="0">Meesterproef</li>
+          </ul>
+        </article>
+        <div class="border"></div>
+        <div clas="terminal">
           <div class="terminal-window">
-            <div id="typed-strings" class="terminal_text">
-              <h3 id="coursename">Klik op een vak 👆</h3>
-              <p id="coursedescription">Voor meer informatie over het vak
-              </p>
+            <header>
+              <div class="red clr-button"></div>
+              <div class="green clr-button"></div>
+              <div class="yellow clr-button"></div>
+            </header>
+            <div class="terminal-window">
+              <div id="typed-strings" class="terminal_text">
+                <h3 id="coursename">Klik op een vak</h3>
+                <p id="coursedescription">Voor meer informatie over het vak
+                </p>
+              </div>
+              <span id="typed"></span>
             </div>
-            <span id="typed"></span>
           </div>
     </section>
     <!-- 
@@ -233,6 +235,14 @@
             <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
             <p>Je wordt uiteindelijk beoordeelt voor je sketchnotes en je gaat artikelen schrijven over het geleerde stof!</p>
           </details>
+          <details>
+            <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
+            <p>Je wordt uiteindelijk beoordeelt voor je sketchnotes en je gaat artikelen schrijven over het geleerde stof!</p>
+          </details>
+          <details>
+            <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
+            <p>Je wordt uiteindelijk beoordeelt voor je sketchnotes en je gaat artikelen schrijven over het geleerde stof!</p>
+          </details>
         </aside>
       </div>
       <div class="avatar-response">
@@ -250,24 +260,22 @@
   <footer>
     <!-- method="post"   -->
     <section id="aanmelden" class="section-page">
-      <div class="page-with-response">
-        <article>
-          <h2 tabindex="0">Aanmelden</h2>
-          <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
-          <p>Je kan je interesse aangeven door een mail te sturen naar
-            <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
-        </article>
-        <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
+      <article>
+        <h2 tabindex="0">Aanmelden</h2>
+        <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
+        <p>Je kan je interesse aangeven door een mail te sturen naar
+          <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
+      </article>
+      <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
 
-          <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
-          <textarea name="reason" cols="30" rows="10"></textarea>
+        <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
+        <textarea name="reason" cols="30" rows="10"></textarea>
 
-          <label for="name">Jouw naam</label>
-          <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
+        <label for="name">Jouw naam</label>
+        <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
 
-          <button type="submit" class="action-button shadow animate blue">Verstuur</button>
-        </form>
-      </div>
+        <button type="submit" class="action-button shadow animate blue">Verstuur</button>
+      </form>
     </section>
   </footer>
 
