@@ -131,23 +131,24 @@ abbr {
   letter-spacing: -0.8px;
 }
 
-nav {
+#home nav {
   position: absolute;
   right: 0;
+  top: 0;
 }
 
-nav ul {
+#home nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   align-items: center;
   margin-top: 2em;
 }
-nav ul li {
+#home nav ul li {
   padding-right: 2em;
 }
 
-nav ul li a {
+#home nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1em;
@@ -162,7 +163,7 @@ nav ul li a {
   cursor: pointer;
 }
 
-nav ul li a:after {
+#home nav ul li a:after {
   content: "";
   background-color: transparent;
   position: absolute;
@@ -175,7 +176,7 @@ nav ul li a:after {
   z-index: -1;
 }
 
-nav ul li a:hover:after {
+#home nav ul li a:hover:after {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
@@ -184,15 +185,15 @@ nav ul li a:hover:after {
   bottom: 0;
 }
 
-nav ul li a,
-nav ul li a:after {
+#home nav ul li a,
+#home nav ul li a:after {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
-nav ul li a:hover {
+#home nav ul li a:hover {
   border: 4px solid black;
 }
 
@@ -212,24 +213,24 @@ nav ul li a:hover {
   background-repeat: repeat;
 }
 
-#home ul {
+#home .list-of-buttons {
   list-style: none;
   display: flex;
   flex-direction: row;
 }
 
-#home ul > li {
+#home .list-of-buttons > li {
   margin: 2em;
 }
 
-#home ul li > a {
+#home .list-of-buttons li > a {
   padding: 0.5em 2rem;
   background-color: black;
   box-shadow: rgb(75, 75, 75) 0px 5px 0px 0px;
   border-radius: 1em;
 }
 
-#home ul li > a:active {
+#home .list-of-buttons li > a:active {
   transform: translate(0px, 5px);
   -webkit-transform: translate(0px, 5px);
 }
@@ -248,6 +249,27 @@ main #impression div article > img {
   flex-direction: column;
   align-items: center;
 }
+
+.layout {
+
+  margin: 0em 2em;
+}
+
+@media screen and (min-width: 40em) {
+  .section-page {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;  
+    
+  }
+  .layout {
+    display: inherit;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 4em;
+  }
+}
 /* section page basic styling */
 
 .section-page > article {
@@ -255,27 +277,44 @@ main #impression div article > img {
   margin: 2em;
 }
 
+@media screen and (min-width: 40em) {
+  .section-page > article {
+    max-width: 40em;
+    margin: 2em;
+  }
+}
+
 /* avatar */
 
 .avatar-response {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 3em 2em;
 }
 
 .avatar-response > .avatar {
+  align-self: center;
   background-image: url("../../imgs/vincent.png");
   background-repeat: no-repeat;
   background-position: 44%;
-  background-size: 4em;
-  border: 2px solid var(--main-color);
+  background-size: 5em;
+  border: 0.3em solid var(--main-color);
   border-radius: 4em;
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 4em;
 }
 
 .avatar-response > p {
   background-color: var(--main-color);
   padding: 0.5em;
   margin: 0.4em;
+}
+
+@media screen and (min-width: 40em) {
+  .avatar-response {
+    align-items: center;
+  }
 }
 
 /* border */
@@ -430,11 +469,5 @@ footer section form > button {
 
 /* hidden class */
 .hidden {
-  display: none;
-  opacity: 0;
-}
-
-.hidden {
-  opacity: 1;
-  transition: all 4s ease-in;
+  display: none !important;
 }
