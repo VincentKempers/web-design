@@ -1,10 +1,11 @@
+/* ROOT STUFF */
 :root {
   --main-color: rgba(248, 204, 70, 1);
   --padding-sections: 6em 0 6em 4em;
   --mobile-sections: 2em;
 }
 
-/* animations */
+/* ANIMATIONS */
 
 @keyframes pulseAnimation {
   0% {
@@ -18,7 +19,7 @@
   }
 }
 
-@-webkit-keyframes fill {
+@keyframes fill {
   0% {
     width: 0%;
     height: 1px;
@@ -61,7 +62,7 @@
   src: url("../../fonts/AnonymousPro-Bold.ttf");
 }
 
-/* buttons */
+/* BUTTONS */
 
 ul.list-of-buttons {
   list-style: none;
@@ -99,7 +100,7 @@ ul.list-of-buttons {
   border-bottom: 1px solid;
 }
 
-/* actual css */
+/* STANDARD STYLING */
 
 * {
   box-sizing: border-box;
@@ -114,7 +115,7 @@ h4,
 h5,
 h6 {
   font-family: poppins-regular;
-  padding: 1em;
+  padding: 1em 1em 2em 0em;
 }
 
 p,
@@ -129,6 +130,9 @@ abbr {
   line-height: 30px;
   letter-spacing: -0.8px;
 }
+
+
+/* NAVIGATION ON HOME */
 
 #home nav {
   position: absolute;
@@ -196,7 +200,7 @@ abbr {
   border: 4px solid black;
 }
 
-/* #home */
+/* #HOME SCREEN */
 
 #home {
   height: 100vh;
@@ -234,7 +238,7 @@ abbr {
   -webkit-transform: translate(0px, 5px);
 }
 
-/* main */
+/* MAIN */
 
 main #impression div article > img {
   width: 30em;
@@ -242,14 +246,14 @@ main #impression div article > img {
   height: auto;
 }
 
-/* standard section page */
+/* STANDARD SECTION STYLING */
 .page-with-response {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .section-page { 
     height: 100vh;
     width: 100vw;
@@ -257,6 +261,7 @@ main #impression div article > img {
   .page-with-response {
     flex-direction: row;
     flex-wrap: row-wrap;
+    justify-content: center;
   }
   .layout {
     display: inherit;
@@ -266,21 +271,21 @@ main #impression div article > img {
     margin: 0em 4em;
   }
 }
-/* section page basic styling */
+/* SECTION PAGE STYLING */
 
 .page-with-response > article {
   max-width: 40em;
   margin: 2em;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .section-page > article {
     max-width: 40em;
     margin: 2em;
   }
 }
 
-/* avatar */
+/* AVATAR W/ TEKST */
 
 .avatar-response {
   display: flex;
@@ -289,7 +294,7 @@ main #impression div article > img {
   margin: 3em 2em;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .avatar-response {
     display: flex;
     flex-direction: column;
@@ -316,36 +321,42 @@ main #impression div article > img {
   margin: 0.4em;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .avatar-response {
     align-items: center;
   }
 }
 
-/* border */
+/* PAGE BORDER */
 
 .border {
   width: 12em;
-  margin-right: 4em;
+  margin-bottom: 4em;
   border-bottom: 0.5em solid black;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .border {
     border-bottom: none;
     border-right: 0.5em solid black;
-    height: 12em;
+    width: 0;
+    height:12em;
+    margin-top: 5em;
+    margin-right: 4em;
   }
 }
-/* ??? */
-#match div:nth-child(3) details > summary {
-  font-size: 1.2em;
-}
 
-/* unique faq */
+
+/* unique FAQ */
 
 .faq {
   margin: 0 2em;
+}
+
+@media screen and (min-width: 60em) {
+  .faq {
+    height: 18em; 
+  }
 }
 
 .faq details {
@@ -356,7 +367,7 @@ main #impression div article > img {
   color: white;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 60em) {
   .faq details {
     width: 30em;
   }
@@ -374,7 +385,10 @@ main #impression div article > img {
   background-color: var(--main-color);
 }
 
-/* form styling */
+#match div:nth-child(3) details > summary {
+  font-size: 1.2em;
+}
+/* FORM styling */
 
 footer section > form {
   margin: 2em 0;
@@ -416,7 +430,7 @@ footer section form > button {
   margin-top: 2em;
 }
 
-/* terminal */
+/* TERMINAL */
 
 .terminal-window {
   margin: 0 auto;
@@ -443,18 +457,6 @@ footer section form > button {
   border-radius: 0.5em; 
 }
 
-.red {
-  background-color: #E75448;
-}
-
-.green {
-  background-color: #3BB662;
-}
-
-.yellow {
-  background-color: #E5C30F;
-}
-
 .terminal-window {
   background-color: #0D1F2D;
   color: #F4FAFF;
@@ -470,6 +472,20 @@ footer section form > button {
   display: inline-block;
   position: relative;
   padding: 1em;
+}
+
+#coursename:before  {
+  content: "👆 ";
+}
+
+@media screen and (min-width: 60em) {
+  #cousername {
+    content: "red";
+  }
+
+  #coursename:before  {
+    content: "👈 ";
+  }
 }
 
 #coursedescription:after {
@@ -488,7 +504,22 @@ footer section form > button {
 }
 
 
+/* THINGS THAT ARE CALLED ONCE (AND DON'T HAVE MUCH CODE) */
+
 /* hidden class */
 .hidden {
   display: none !important;
+}
+
+/* terminal button colors */
+.red {
+  background-color: #E75448;
+}
+
+.green {
+  background-color: #3BB662;
+}
+
+.yellow {
+  background-color: #E5C30F;
 }
