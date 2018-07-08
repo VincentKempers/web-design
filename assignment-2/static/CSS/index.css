@@ -114,8 +114,7 @@ h4,
 h5,
 h6 {
   font-family: poppins-regular;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  padding: 1em;
 }
 
 p,
@@ -244,23 +243,20 @@ main #impression div article > img {
 }
 
 /* standard section page */
-.section-page {
+.page-with-response {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.layout {
-
-  margin: 0em 2em;
-}
-
 @media screen and (min-width: 40em) {
-  .section-page {
+  .section-page { 
     height: 100vh;
     width: 100vw;
-    justify-content: center;  
-    
+  }
+  .page-with-response {
+    flex-direction: row;
+    flex-wrap: row-wrap;
   }
   .layout {
     display: inherit;
@@ -272,7 +268,7 @@ main #impression div article > img {
 }
 /* section page basic styling */
 
-.section-page > article {
+.page-with-response > article {
   max-width: 40em;
   margin: 2em;
 }
@@ -293,6 +289,14 @@ main #impression div article > img {
   margin: 3em 2em;
 }
 
+@media screen and (min-width: 40em) {
+  .avatar-response {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .avatar-response > .avatar {
   align-self: center;
   background-image: url("../../imgs/vincent.png");
@@ -303,6 +307,7 @@ main #impression div article > img {
   border-radius: 4em;
   width: 4em;
   height: 4em;
+  margin:1em 0;
 }
 
 .avatar-response > p {
@@ -321,8 +326,16 @@ main #impression div article > img {
 
 .border {
   width: 12em;
-  margin: 3em 2em;
+  margin-right: 4em;
   border-bottom: 0.5em solid black;
+}
+
+@media screen and (min-width: 40em) {
+  .border {
+    border-bottom: none;
+    border-right: 0.5em solid black;
+    height: 12em;
+  }
 }
 /* ??? */
 #match div:nth-child(3) details > summary {
@@ -336,16 +349,24 @@ main #impression div article > img {
 }
 
 .faq details {
-  background-color: grey;
+  background-color: #9a9a9a;
   padding-bottom: 0.6em;
   margin-bottom: 1em;
-  padding: 0.5em;
+  padding: 1em;
+  color: white;
+}
+
+@media screen and (min-width: 40em) {
+  .faq details {
+    width: 30em;
+  }
 }
 
 .faq details > p {
   background-color: white;
   margin: 0.3em;
   padding: 0.6em;
+  color:black;
 }
 
 #intro,
