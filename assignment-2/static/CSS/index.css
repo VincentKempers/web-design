@@ -36,8 +36,12 @@
   100% {
     width: 100%;
     opacity: 1;
-    /* background: #333; */
   }
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
 }
 
 /* FONTS */
@@ -123,6 +127,10 @@ h6 {
   padding: 1em 1em 2em 0em;
 }
 
+strong {
+  font-family: open-sans-bold;
+}
+
 p,
 li,
 a,
@@ -136,8 +144,10 @@ abbr {
   letter-spacing: -0.8px;
 }
 
+/* MOBILE NAVIGATION MENU */
 
-/* NAVIGATION ON HOME */
+
+/* NAVIGATION DESKTOP ON HOME */
 @media screen and (min-width: 60em) {
 
 main nav {
@@ -229,7 +239,27 @@ main nav ul li a:focus {
 #home .list-of-buttons {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home > h1 {
+  font-size: 2.3em;
+  text-align: center;
+  padding: .5em;
+}
+
+#home > h3 {
+  text-align:center;
+}
+
+@media screen and (min-width: 60em) {
+  #home .list-of-buttons {
+    flex-direction: row;
+  }
+  #home > h1 {
+    font-size: 4em;
+  }
 }
 
 #home .list-of-buttons > li {
@@ -262,11 +292,12 @@ main #impression div article > img {
   flex-direction: column;
   align-items: center;
 }
+
 .section-page { 
   background-image: url("../../imgs/pattern.png");
-  background-color: var(--main-color);
-  background-repeat: repeat;
   background-blend-mode: color-burn;
+  background-repeat: repeat;
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -276,16 +307,16 @@ main #impression div article > img {
   .section-page { 
     height: 100vh;
     width: 100vw;
-    background-image: url("../../imgs/pattern.png");
-    background-color: var(--main-color);
-    background-repeat: repeat;
-    background-blend-mode: color-burn;
+    animation: backgroundAnimation 15s linear infinite;
   }
 
   .page-with-response {
     flex-direction: row;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
+    background-color: white;
+    margin: 2em;
+    border-radius: 2em;
   }
   .layout {
     display: inherit;
@@ -370,8 +401,7 @@ main #impression div article > img {
     border-right: 0.5em solid black;
     width: 0;
     height:12em;
-    margin-top: 5em;
-    margin-right: 4em;
+    margin: 5em 2em 0em 2em;
   }
 }
 
@@ -379,14 +409,11 @@ main #impression div article > img {
 /* unique FAQ */
 
 .faq {
-  margin: 0 2em;
+  margin: 1em 2em;
+  position: relative;
+  width: 50%;
 }
 
-@media screen and (min-width: 60em) {
-  .faq {
-    height: 18em; 
-  }
-}
 
 .faq details {
   background-color: #9a9a9a;
@@ -396,9 +423,16 @@ main #impression div article > img {
   color: white;
 }
 
+.faq details[open] SUMMARY ~ * {
+  animation: sweep .5s ease-in;
+}
+
 @media screen and (min-width: 60em) {
   .faq details {
-    width: 30em;
+    
+  }
+  .faq details:hover {
+    background-color: #c0bebe;
   }
 }
 
@@ -430,7 +464,7 @@ footer > section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 footer section div > form {
@@ -497,6 +531,7 @@ footer section div form > label {
 
 #lesprogramma div article > h1 {
   font-size: 2.3em;
+  padding:0.5em;
 }
 
 #course-list > li {
@@ -614,6 +649,10 @@ footer section div form > label {
 /* hidden class */
 .hidden {
   display: none !important;
+}
+
+.hamburger-hidden {
+  display: none;
 }
 
 /* terminal button colors */
