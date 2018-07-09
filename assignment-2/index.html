@@ -16,10 +16,7 @@
 
   <main>
     <nav>
-      <ul class="navigation-list">
-        <!-- <li>
-                      <a href="#home">Home</a>
-                    </li> -->
+      <ul id="header-navigation" class="navigation-list">
         <li>
           <a href="#lesprogramma">Lesprogramma</a>
         </li>
@@ -27,6 +24,7 @@
           <a href="#aanmelden">Aanmelden</a>
         </li>
       </ul>
+      <img id=hamburger-menu src="imgs/ic_menu_48px.svg" alt="mobile menu">
     </nav>
     <section id="home">
 
@@ -34,7 +32,10 @@
       <h3 lang="en">Ben jij de designer/developer die graag zijn werk tot leven brengt?</h3>
       <ul class="list-of-buttons">
         <li>
-          <a href="#match" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+          <a href="#intro" class="action-button shadow animate blue">JAAAAA!</a>
+        </li>
+        <li>
+          <a href="#match" class="action-button shadow animate blue">Ik weet het nog niet..</a>
         </li>
       </ul>
     </section>
@@ -47,14 +48,17 @@
             de grenzen van wat er mogelijk is op het web. Van studenten wordt verwacht dat ze gedegen kennis hebben van
             <abbr>HTML</abbr>,
             <abbr>CSS</abbr> en JavaScript. </p>
-          <p>Ben je leergierig en nieuwsgierig? Gedreven en zelfredzaam? Heb je affiniteit met techniek of wil je je technische
-            (design) skills verdiepen? Droom je van
+          <p>Ben je
+            <strong>leergierig</strong> en
+            <strong>nieuwsgierig</strong>? Gedreven en zelfredzaam? Heb je affiniteit met techniek of wil je je technische (
+            <strong>design</strong> ) skills verdiepen? Droom je van
             <i lang="en">Real time</i>,
             <i lang="en">Responsive</i> en
             <i lang="en">Reactive</i>? Of misschien wil je dat leren? Dan is deze minor voor jou!</p>
-          <p>Deze minor is ook geschikt voor Visual Interface Designers en Interactie ontwerpers die alles willen weten over
-            het web, over toegankelijkheid, én over hoe code van invloed is op het ontwerpen en maken van websites. De lesstof
-            wordt op verschillende niveau's aangeboden, afhankelijk van de kennis en skills van de student.</p>
+          <p>Deze minor is ook geschikt voor
+            <strong>Visual Interface Designers en Interactie ontwerpers</strong> die alles willen weten over het web, over toegankelijkheid,
+            én over hoe code van invloed is op het ontwerpen en maken van websites. De lesstof wordt op verschillende niveau's
+            aangeboden, afhankelijk van de kennis en skills van de student.</p>
         </article>
 
         <div class="border"></div>
@@ -75,7 +79,7 @@
       </div>
       <ul class="list-of-buttons">
         <li>
-          <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+          <a href="#intro" class="action-button shadow animate blue">Misschien een introductie</a>
         </li>
       </ul>
     </section>
@@ -266,7 +270,8 @@
       <div class="page-with-response">
         <article>
           <h2 tabindex="0">Aanmelden</h2>
-          <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
+          <p>Vanaf 25 september kun je je op
+            <a href="https://sis.hva.nl/">SIS</a> inschrijven voor de minor.</p>
           <p>Je kan je interesse aangeven door een mail te sturen naar
             <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
         </article>
@@ -274,9 +279,9 @@
 
         <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
           <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
-          <textarea name="reason" cols="30" rows="10"></textarea>
-          <label for="name">ik heet</label>
-          <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
+          <textarea name="reason" cols="30" rows="10" placeholder="Typ hier waarom je de minor zou willen doen!"></textarea>
+          <label for="name">Jouw naam:</label>
+          <input type="text" name="name" autocomplete="name" placeholder="Voornaam achternaam" required="true">
           <button type="submit" class="action-button shadow animate blue">Verstuur</button>
         </form>
       </div>
