@@ -19,19 +19,24 @@
   }
 }
 
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 10% 20%;
+  }
+}
+
 @keyframes fill {
   0% {
-    width: 0%;
-    height: 1px;
-  }
-  50% {
-    width: 100%;
-    height: 1px;
+    width: 55%;
+    opacity: 0;
   }
   100% {
     width: 100%;
-    height: 100%;
-    background: #333;
+    opacity: 1;
+    /* background: #333; */
   }
 }
 
@@ -133,29 +138,30 @@ abbr {
 
 
 /* NAVIGATION ON HOME */
+@media screen and (min-width: 60em) {
 
-#home nav {
+main nav {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-#home nav ul {
+main nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   align-items: center;
   margin-top: 2em;
 }
-#home nav ul li {
+main nav ul li {
   padding-right: 2em;
 }
 
-#home nav ul li a {
+main nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1em;
-  background: none;
+  background: black;
   vertical-align: middle;
   position: relative;
   z-index: 1;
@@ -166,9 +172,9 @@ abbr {
   cursor: pointer;
 }
 
-#home nav ul li a:after {
+main nav ul li a:after {
   content: "";
-  background-color: transparent;
+  background-color: black;
   position: absolute;
   top: -20px;
   left: -20px;
@@ -179,7 +185,8 @@ abbr {
   z-index: -1;
 }
 
-#home nav ul li a:hover:after {
+main nav ul li a:hover:after,
+main nav ul li a:focus:after {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.8);
   top: 0;
@@ -188,16 +195,18 @@ abbr {
   bottom: 0;
 }
 
-#home nav ul li a,
-#home nav ul li a:after {
+main nav ul li a,
+main nav ul li a:after {
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
-#home nav ul li a:hover {
+main nav ul li a:hover,
+main nav ul li a:focus {
   border: 4px solid black;
+}
 }
 
 /* #HOME SCREEN */
@@ -210,10 +219,11 @@ abbr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 2em;
+  position: absolute;
   background-image: url("../../imgs/pattern.png");
   background-blend-mode: color-burn;
   background-repeat: repeat;
+  animation: backgroundAnimation 10s linear infinite;
 }
 
 #home .list-of-buttons {
@@ -252,16 +262,30 @@ main #impression div article > img {
   flex-direction: column;
   align-items: center;
 }
+.section-page { 
+  background-image: url("../../imgs/pattern.png");
+  background-color: gold;
+  background-repeat: repeat;
+  background-blend-mode: color-burn;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 @media screen and (min-width: 60em) {
   .section-page { 
     height: 100vh;
     width: 100vw;
+    background-image: url("../../imgs/pattern.png");
+    background-color: gold;
+    background-repeat: repeat;
+    background-blend-mode: color-burn;
   }
+
   .page-with-response {
     flex-direction: row;
-    flex-wrap: row-wrap;
     justify-content: center;
+    align-items: center ;
   }
   .layout {
     display: inherit;
@@ -291,14 +315,12 @@ main #impression div article > img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3em 2em;
+  padding: 3em 2em;
 }
 
 @media screen and (min-width: 60em) {
   .avatar-response {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;  
   }
 }
 
@@ -308,16 +330,23 @@ main #impression div article > img {
   background-repeat: no-repeat;
   background-position: 44%;
   background-size: 5em;
-  border: 0.3em solid var(--main-color);
+  border: 0.3em solid black;
   border-radius: 4em;
   width: 4em;
   height: 4em;
-  margin:1em 0;
 }
 
+@media screen and (min-width: 60em) {
+  .avatar-response > .avatar {
+    margin: 3em 0 0 20em;
+    position: absolute;
+  }
+}
 .avatar-response > p {
-  background-color: var(--main-color);
-  padding: 0.5em;
+  background-color: black;
+  font-style: oblique;
+  color: white;
+  padding: 0.8em;
   margin: 0.4em;
 }
 
@@ -385,29 +414,44 @@ main #impression div article > img {
   background-color: var(--main-color);
 }
 
+
+@media screen and (min-width: 60em) {
+  #intro > .page-with-response{
+    align-items: flex-start;
+  }
+}
+
 #match div:nth-child(3) details > summary {
   font-size: 1.2em;
 }
 /* FORM styling */
 
-footer section > form {
-  margin: 2em 0;
+footer > section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-footer section form > textarea {
-  background: none;
+footer section div > form {
+  margin: 2em;
+  
+}
+
+footer section div form > textarea {
+  font-size: 1.4em;
+  font-family: monospace;
   border: none;
   resize: none;
   border: 0.3em solid black;
-  margin: 1em 0;
+  
+  margin: 1em 0em;
   padding: 0.4em;
 }
 
-footer section form > input {
+footer section div form > input {
   font-family: monospace;
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: bolder;
   border: none;
   border-bottom: 0.3em solid black;
@@ -416,18 +460,64 @@ footer section form > input {
   padding: 0.4em;
 }
 
-footer form > input[type="email"]:invalid {
-  border: 0.3em solid red;
+footer section div form > input[type="text"]:invalid {
+  border-bottom: 0.3em solid red;
   transition: all 0.5s ease-in;
 }
 
-footer form > input[type="email"]:valid {
-  border: 0.3em solid green;
+footer section div form > input[type="text"]:valid {
+  border-bottom: 0.3em solid green;
   transition: all 0.5s ease-in;
 }
 
-footer section form > button {
+footer section div form > button {
   margin-top: 2em;
+}
+
+footer section div form > label {
+  font-family: poppins-regular;
+}
+
+@media screen and (min-width: 60em) {
+  footer section > div {
+    align-items:flex-start !important;
+  }
+
+  footer section div > form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* COURSE LIST */
+#course-list {
+  list-style: none;
+}
+
+#lesprogramma div article > h1 {
+  font-size: 2.3em;
+}
+
+#course-list > li {
+  color: white;
+  background-color: black;
+  padding: 0.8em 1em;
+  margin: 1em
+}
+
+#course-list > li:focus:before {
+  content: "►   ";
+  align-self: center;
+  transition: all 1.2s ease-in;
+}
+
+#course-list > li:focus,
+#course-list > li:hover {
+  background-color:white;
+  color: black;
+  font-weight: bolder;
+  transition: all .3s ease-in;
 }
 
 /* TERMINAL */
@@ -465,7 +555,7 @@ footer section form > button {
 
 .terminal-text {
   margin-left: 1.1em;
-  font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+  font-family: monospace, Monaco, "Consolas", "Courier New", "Courier";
 }
 
 #typed-strings {
@@ -486,6 +576,11 @@ footer section form > button {
   #coursename:before  {
     content: "👈 ";
   }
+
+  .terminal-window {
+    width: 30em;
+    transition: all .5s ease-in;
+  }
 }
 
 #coursedescription:after {
@@ -501,6 +596,16 @@ footer section form > button {
 #typed {
   font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
   margin-left: 1em;
+}
+
+/* SECTION PAGE STYLING -- EXEPTION TO LESPROGRAMME */
+
+@media screen and (min-width: 60em) {
+  #lesprogramma {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 
