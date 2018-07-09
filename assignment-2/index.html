@@ -13,23 +13,25 @@
 </head>
 
 <body>
+
   <main>
+    <nav>
+      <ul class="navigation-list">
+        <!-- <li>
+                      <a href="#home">Home</a>
+                    </li> -->
+        <li>
+          <a href="#lesprogramma">Lesprogramma</a>
+        </li>
+        <li>
+          <a href="#aanmelden">Aanmelden</a>
+        </li>
+      </ul>
+    </nav>
     <section id="home">
-      <nav>
-        <ul class="navigation-list">
-          <!-- <li>
-                    <a href="#home">Home</a>
-                  </li> -->
-          <li>
-            <a href="#lesprogramma">Lesprogramma</a>
-          </li>
-          <li>
-            <a href="#aanmelden">Aanmelden</a>
-          </li>
-        </ul>
-      </nav>
-      <h1 lang="en">Welkom bij de Minor Webdevelopment</h1>
-      <h3 lang="en">Ben jij de designer die graag zijn werk tot leven brengt?</h3>
+
+      <h1 lang="en  ">Welkom bij de Minor Webdevelopment</h1>
+      <h3 lang="en">Ben jij de designer/developer die graag zijn werk tot leven brengt?</h3>
       <ul class="list-of-buttons">
         <li>
           <a href="#match" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
@@ -70,12 +72,12 @@
       <div class="avatar-response">
         <p>"Het was wel een uitdaging als Visual Interface Designer, maar ik heb enorm veel geleerd!" - Yung Stunna Vinnelientje</p>
         <div class="avatar"></div>
-        <ul class="list-of-buttons">
-          <li>
-            <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
-          </li>
-        </ul>
       </div>
+      <ul class="list-of-buttons">
+        <li>
+          <a href="#intro" class="action-button shadow animate blue">Ben jij wie wij zoeken?</a>
+        </li>
+      </ul>
     </section>
     <section class="section-page" id="intro">
       <div class="page-with-response">
@@ -101,10 +103,15 @@
             <a href="http://hva.nl/">Hogeschool van Amsterdam</a>. CMD Amsterdam is een ontwerpopleiding digital design met drie focuspunten: interaction
             design, visual design en front-end development. De minor sluit aan bij het profiel Front-end developer.
           </p>
-
         </article>
         <div class="border"></div>
-        <p>Wahooo</p>
+        <article>
+          <h2>Niet alleen maar
+            <em>nerds</em>!</h2>
+          <p>Deze minor heeft heel wat beroepsrollen mogen klaarstomen voor front-end development. Natuurlijk hebben wij veel
+            front-enders van CMD gehad, maar we mogen met trots vertellen dat er heel wat CMD designers, UX-designers, economie
+            leerlingen en IT'ers.</p>
+        </article>
       </div>
       <ul class="list-of-buttons">
         <li>
@@ -226,18 +233,14 @@
         </article>
         <div class="border"></div>
         <aside class="faq">
-          <details>
+          <details open>
             <summary>Drie weken per vak, hoe zit het dan met begeleiding!?</summary>
             <p>Leraren zijn er elke ochtend en aan het einde van de dag. Aan het eind heb je een stand up om te vertellen hoe
               het gaat en waar het mis loopt. Daarnaast hebben we slack waar je vragen kan stellen.</p>
           </details>
           <details>
-            <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
-            <p>Je wordt uiteindelijk beoordeelt voor je sketchnotes en je gaat artikelen schrijven over het geleerde stof!</p>
-          </details>
-          <details>
-            <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
-            <p>Je wordt uiteindelijk beoordeelt voor je sketchnotes en je gaat artikelen schrijven over het geleerde stof!</p>
+            <summary>Weekly Nerds!?</summary>
+            <p>Ja, Toffe gastsprekers met hedendaagse onderwerpen! Smashing magazine, lifely, W3C, etc.</p>
           </details>
           <details>
             <summary>Weekly Nerds!? Is dat voor een cijfer?</summary>
@@ -249,33 +252,34 @@
         <p>"Door begeleiding van de leraren kon ik mij er vrij snel door heen slaan. Plus dat je vragen kan stellen aan je klasgenoten
           via slack. Je krijgt een community gevoel." - Young Humberto Tan op de Mic</p>
         <div class="avatar"></div>
-        <ul class="list-of-buttons">
-          <li>
-            <a href="#aanmelden" class="action-button shadow animate blue">Meld je nu aan!</a>
-          </li>
-        </ul>
       </div>
+      <ul class="list-of-buttons">
+        <li>
+          <a href="#aanmelden" class="action-button shadow animate blue">Meld je nu aan!</a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer>
     <!-- method="post"   -->
     <section id="aanmelden" class="section-page">
-      <article>
-        <h2 tabindex="0">Aanmelden</h2>
-        <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
-        <p>Je kan je interesse aangeven door een mail te sturen naar
-          <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
-      </article>
-      <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
+      <div class="page-with-response">
+        <article>
+          <h2 tabindex="0">Aanmelden</h2>
+          <p>Vanaf 25 september kun je je op SIS inschrijven voor de minor.</p>
+          <p>Je kan je interesse aangeven door een mail te sturen naar
+            <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
+        </article>
+        <div class="border"></div>
 
-        <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
-        <textarea name="reason" cols="30" rows="10"></textarea>
-
-        <label for="name">Jouw naam</label>
-        <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
-
-        <button type="submit" class="action-button shadow animate blue">Verstuur</button>
-      </form>
+        <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
+          <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
+          <textarea name="reason" cols="30" rows="10"></textarea>
+          <label for="name">ik heet</label>
+          <input type="text" name="name" autocomplete="name" placeholder="voornaam achternaam" required="true">
+          <button type="submit" class="action-button shadow animate blue">Verstuur</button>
+        </form>
+      </div>
     </section>
   </footer>
 
