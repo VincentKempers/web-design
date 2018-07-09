@@ -24,10 +24,13 @@
           <a href="#aanmelden">Aanmelden</a>
         </li>
       </ul>
-      <img id=hamburger-menu src="imgs/ic_menu_48px.svg" alt="mobile menu">
+      <svg id="hamburger-menu" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+        <g class="nc-icon-wrapper" fill="#111111">
+          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+        </g>
+      </svg>
     </nav>
     <section id="home">
-
       <h1 lang="en  ">Welkom bij de Minor Webdevelopment</h1>
       <h3 lang="en">Ben jij de designer/developer die graag zijn werk tot leven brengt?</h3>
       <ul class="list-of-buttons">
@@ -63,6 +66,7 @@
 
         <div class="border"></div>
         <div class="faq">
+          <h2>FAQ</h2>
           <details>
             <summary>Zijn er visual interface designer die het hebben gehaald?</summary>
             <p>Ja natúúrlijk</p>
@@ -141,7 +145,7 @@
           </ul>
         </article>
         <div class="border"></div>
-        <div clas="terminal">
+        <div class="terminal">
           <div class="terminal-window">
             <header>
               <div class="red clr-button"></div>
@@ -158,69 +162,6 @@
             </div>
           </div>
     </section>
-    <!-- 
-    <section id="impression">
-      <h2 tabindex="0">Impressie</h2>
-      <div id="scrollboi">
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-14.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-16-17/showtime.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-16-17/theme-parks-for-the-web.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-0.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-1.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-2.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-3.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-4.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-5.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-6.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-7.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-8.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-9.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-10.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-12.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-13.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-15.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-        <article>
-          <img src="imgs/cmd-18/image-cmd-18-16.jpg" alt="Titus die rond aan het klikken is">
-        </article>
-      </div>
-    </section> -->
 
     <section class="section-page" id="werkwijze">
       <div class="page-with-response">
@@ -237,7 +178,8 @@
         </article>
         <div class="border"></div>
         <aside class="faq">
-          <details open>
+          <h2>FAQ</h2>
+          <details>
             <summary>Drie weken per vak, hoe zit het dan met begeleiding!?</summary>
             <p>Leraren zijn er elke ochtend en aan het einde van de dag. Aan het eind heb je een stand up om te vertellen hoe
               het gaat en waar het mis loopt. Daarnaast hebben we slack waar je vragen kan stellen.</p>
@@ -269,21 +211,73 @@
     <section id="aanmelden" class="section-page">
       <div class="page-with-response">
         <article>
-          <h2 tabindex="0">Aanmelden</h2>
+          <h2 tabindex="0">Be part of the team!</h2>
           <p>Vanaf 25 september kun je je op
             <a href="https://sis.hva.nl/">SIS</a> inschrijven voor de minor.</p>
           <p>Je kan je interesse aangeven door een mail te sturen naar
             <a href="mailto:k.g.reynders@hva.nl">Koop Reynders</a>.</p>
         </article>
-        <div class="border"></div>
-
-        <form method="POST" action="mailto:me@vncn.tk?subject=Aanmelding Minor Webdevelopment" enctype="text/plain">
-          <label for="field-password">Waarom wil wil jij zo graag deelnemen?</label>
-          <textarea name="reason" cols="30" rows="10" placeholder="Typ hier waarom je de minor zou willen doen!"></textarea>
-          <label for="name">Jouw naam:</label>
-          <input type="text" name="name" autocomplete="name" placeholder="Voornaam achternaam" required="true">
-          <button type="submit" class="action-button shadow animate blue">Verstuur</button>
-        </form>
+        <article id="impression">
+          <ul id="scrollboi">
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-14.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-16-17/showtime.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-16-17/theme-parks-for-the-web.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-0.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-1.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-2.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-3.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-4.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-5.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-6.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-7.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-8.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-9.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-10.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-12.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-13.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-15.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+            <li>
+              <img src="imgs/cmd-18/image-cmd-18-16.jpg" alt="Titus die rond aan het klikken is">
+            </li>
+          </ul>
+        </article>
       </div>
     </section>
   </footer>

@@ -70,22 +70,25 @@
       })
     },
     mobileNavigation: () => {
-      let hamburger = document.querySelector('#hamburger-menu');
-      let navItems = document.querySelector('#header-navigation');
-      navItems.classList.add('hamburger-hidden');
+      let hamburger = document.getElementById('hamburger-menu');
+      let navItems = document.getElementById('header-navigation');
       hamburger.addEventListener('click', (event) => {
-        if (navItems.classList.contains('hamburger-hidden') == true) {
-          navItems.classList.remove('hamburger-hidden');
+        if (navItems.style.display === "none") {
+          navItems.style.display = "block";
         } else {
-          navItems.classList.add('hamburger-hidden');
+          navItems.style.display = "none";
         }
       }, true);
-    }
+    },
+
   };
 
   app.courseNameChecked();
   app.mobileNavigation();
-
+  window.setInterval(function () {
+    var elem = document.getElementById('scrollboi');
+    elem.scrollLeft += 1;
+  }, 100);
 
 
   function hideElements(selector) {

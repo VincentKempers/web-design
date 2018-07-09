@@ -132,7 +132,6 @@ strong {
 }
 
 p,
-li,
 a,
 input,
 label,
@@ -144,8 +143,54 @@ abbr {
   letter-spacing: -0.8px;
 }
 
-/* MOBILE NAVIGATION MENU */
+li {
+  font-family: open-sans, helvetica, sans-serif;
+  line-height: 30px;
+  letter-spacing: -0.8px;
+}
 
+/* MOBILE NAVIGATION MENU */
+@media screen and (max-width: 60em){
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+  }
+
+  nav > svg {
+    background: #000000;
+    width: auto;
+    padding: .5em; 
+    border-radius: 0em 0em 0em 1em;
+  }
+
+  nav svg > g {
+    fill: white;
+  }
+  
+  nav > ul {
+    background-color: black;
+    display:none;
+    background: blur(1px);
+    list-style: none;
+    height: auto;
+    transition: height 2s ease;
+  }
+
+  nav ul > li {
+    padding: 1.5em 5em;
+    width: 100vw;
+    text-align: center;
+  }
+  nav ul li > a {
+    text-decoration: none;
+    color: white;
+  }
+}
 
 /* NAVIGATION DESKTOP ON HOME */
 @media screen and (min-width: 60em) {
@@ -156,8 +201,12 @@ main nav {
   top: 0;
 }
 
-main nav ul {
-  display: flex;
+main nav svg {
+  display: none;
+}
+
+ main nav ul {
+  display: flex !important; /* the reason i put this on important to reset the js styles to normal*/
   flex-direction: row;
   list-style: none;
   align-items: center;
@@ -293,7 +342,7 @@ main #impression div article > img {
   align-items: center;
 }
 
-.section-page { 
+.section-page {
   background-image: url("../../imgs/pattern.png");
   background-blend-mode: color-burn;
   background-repeat: repeat;
@@ -379,6 +428,7 @@ main #impression div article > img {
   color: white;
   padding: 0.8em;
   margin: 0.4em;
+  align-self: center;
 }
 
 @media screen and (min-width: 60em) {
@@ -400,18 +450,37 @@ main #impression div article > img {
     border-bottom: none;
     border-right: 0.5em solid black;
     width: 0;
-    height:12em;
+    height: 12em;
     margin: 5em 2em 0em 2em;
   }
 }
 
 
-/* unique FAQ */
+#aanmelden > .page-with-response {
+  flex-direction: column;
+}
 
+#scrollboi {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  overflow-x: auto;
+  width: 90vw;
+  overflow-y: hidden;
+  height: 12em;
+}
+
+#scrollboi li > img {
+  width: 16em;
+  margin-right: 1em;
+}
+
+/* unique FAQ */
 .faq {
-  margin: 1em 2em;
+  margin: 2em;
   position: relative;
   width: 50%;
+  align-self: baseline
 }
 
 
@@ -460,6 +529,7 @@ main #impression div article > img {
 }
 /* FORM styling */
 
+
 footer > section {
   display: flex;
   flex-direction: column;
@@ -469,7 +539,8 @@ footer > section {
 
 footer section div > form {
   margin: 2em;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 footer section div form > textarea {
@@ -506,6 +577,7 @@ footer section div form > input[type="text"]:valid {
 
 footer section div form > button {
   margin-top: 2em;
+  align-self: center;
 }
 
 footer section div form > label {
@@ -551,12 +623,12 @@ footer section div form > label {
 #course-list > li:hover {
   background-color:white;
   color: black;
-  font-weight: bolder;
-  transition: all .3s ease-in;
+  font-weight: bolder;  
+  overflow: hidden;
+  transition: all .5s ease-in;
 }
 
 /* TERMINAL */
-
 .terminal-window {
   margin: 0 auto;
   width: 20em;
@@ -604,6 +676,16 @@ footer section div form > label {
 }
 
 @media screen and (min-width: 60em) {
+  #course-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .terminal {
+    margin: 2em;
+  }
+
   #cousername {
     content: "red";
   }
@@ -611,6 +693,7 @@ footer section div form > label {
   #coursename:before  {
     content: "👈 ";
   }
+
 
   .terminal-window {
     width: 30em;
@@ -633,7 +716,7 @@ footer section div form > label {
   margin-left: 1em;
 }
 
-/* SECTION PAGE STYLING -- EXEPTION TO LESPROGRAMME */
+/* SECTION PAGE STYLING -- EXCEPTION TO LESPROGRAMME */
 
 @media screen and (min-width: 60em) {
   #lesprogramma {
@@ -651,8 +734,10 @@ footer section div form > label {
   display: none !important;
 }
 
+
 .hamburger-hidden {
   display: none;
+  transition: all 2s ease-in;
 }
 
 /* terminal button colors */
