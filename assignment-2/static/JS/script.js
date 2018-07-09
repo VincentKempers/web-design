@@ -1,6 +1,4 @@
 (function () {
-  const message = "this should be shown";
-
   var totalCourses = [
     {
       course: "CSS to the rescue",
@@ -56,9 +54,9 @@
       showElement(id);
     },
     courseNameChecked: () => {
-      var ulList = document.querySelector("#course-list").children;
-      var courseName = document.querySelector("#coursename");
-      var courseDesc = document.querySelector("#coursedescription");
+      let ulList = document.querySelector("#course-list").children;
+      let courseName = document.querySelector("#coursename");
+      let courseDesc = document.querySelector("#coursedescription");
       totalCourses.map((d) => {
         for (let i = 0; i < ulList.length; i++) {
           const element = ulList[i];
@@ -70,44 +68,56 @@
           }, true)
         };
       })
-
+    },
+    mobileNavigation: () => {
+      let hamburger = document.querySelector('#hamburger-menu');
+      let navItems = document.querySelector('#header-navigation');
+      navItems.classList.add('hamburger-hidden');
+      hamburger.addEventListener('click', (event) => {
+        if (navItems.classList.contains('hamburger-hidden') == true) {
+          navItems.classList.remove('hamburger-hidden');
+        } else {
+          navItems.classList.add('hamburger-hidden');
+        }
+      }, true);
     }
   };
 
   app.courseNameChecked();
+  app.mobileNavigation();
 
 
 
   function hideElements(selector) {
     document.querySelectorAll(selector).forEach((element) => {
-      element.classList.add("hidden");
+      element.classList.add('hidden');
     });
   }
 
   function showElement(selector) {
-    document.querySelector(selector).classList.remove("hidden");
+    document.querySelector(selector).classList.remove('hidden');
   }
 
   routie({
-    "home": function () {
+    'home': function () {
       app.toggle(window.location.hash);
     },
-    "": function () {
-      window.location.hash = "#home";
+    '': function () {
+      window.location.hash = '#home';
     },
-    "match": function () {
+    'match': function () {
       app.toggle(window.location.hash);
     },
-    "intro": function () {
+    'intro': function () {
       app.toggle(window.location.hash);
     },
-    "werkwijze": function () {
+    'werkwijze': function () {
       app.toggle(window.location.hash);
     },
-    "lesprogramma": function () {
+    'lesprogramma': function () {
       app.toggle(window.location.hash);
     },
-    "aanmelden": function () {
+    'aanmelden': function () {
       app.toggle(window.location.hash);
     }
   });
