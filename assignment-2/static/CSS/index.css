@@ -21,10 +21,13 @@
 
 @keyframes backgroundAnimation {
   0% {
-    background-position: 0 0;
+    background-position: 0em 0em;
   }
+  /* 50% {
+    background-position: 10em 0;
+  } */
   100% {
-    background-position: 10% 20%;
+    background-position: 100em 100em;
   }
 }
 
@@ -86,7 +89,7 @@ ul.list-of-buttons {
 }
 
 .action-button {
-  position: relative;
+  position: relative; 
   padding: 10px 40px;
   margin: 0px 10px 10px 0px;
   float: left;
@@ -282,7 +285,7 @@ main nav ul li a:focus {
   background-image: url("../../imgs/pattern.png");
   background-blend-mode: color-burn;
   background-repeat: repeat;
-  animation: backgroundAnimation 10s linear infinite;
+  animation: backgroundAnimation 100s linear infinite;
 }
 
 #home .list-of-buttons {
@@ -356,7 +359,7 @@ main #impression div article > img {
   .section-page { 
     height: 100vh;
     width: 100vw;
-    animation: backgroundAnimation 15s linear infinite;
+    animation: backgroundAnimation 100s linear infinite;
   }
 
   .page-with-response {
@@ -380,6 +383,7 @@ main #impression div article > img {
 .page-with-response > article {
   max-width: 40em;
   margin: 2em;
+  align-self: baseline;
 }
 
 @media screen and (min-width: 60em) {
@@ -409,7 +413,7 @@ main #impression div article > img {
   background-image: url("../../imgs/vincent.png");
   background-repeat: no-repeat;
   background-position: 44%;
-  background-size: 5em;
+  background-size: 4.2em;
   border: 0.3em solid black;
   border-radius: 4em;
   width: 4em;
@@ -422,13 +426,17 @@ main #impression div article > img {
     position: absolute;
   }
 }
+
 .avatar-response > p {
   background-color: black;
-  font-style: oblique;
   color: white;
   padding: 0.8em;
   margin: 0.4em;
   align-self: center;
+}
+
+p > q {
+  font-style: oblique;
 }
 
 @media screen and (min-width: 60em) {
@@ -465,7 +473,7 @@ main #impression div article > img {
   flex-direction: row;
   list-style: none;
   overflow-x: auto;
-  width: 90vw;
+  width: 87vw;
   overflow-y: hidden;
   height: 12em;
 }
@@ -479,7 +487,6 @@ main #impression div article > img {
 .faq {
   margin: 2em;
   position: relative;
-  width: 50%;
   align-self: baseline
 }
 
@@ -493,12 +500,12 @@ main #impression div article > img {
 }
 
 .faq details[open] SUMMARY ~ * {
-  animation: sweep .5s ease-in;
+  animation: sweep .3s ease-in;
 }
 
 @media screen and (min-width: 60em) {
-  .faq details {
-    
+  .faq {
+        width: 50%;
   }
   .faq details:hover {
     background-color: #c0bebe;
