@@ -13,7 +13,7 @@
 
 ## Minor website
 
-![Home page!](assets/home.png)
+![Home page!](assets/new-home.png)
 
 The website of the minor web development needs an upgrade. It is my task to make this upgrade accessible for one user (Marijn) and for the users that would probably visit the site. That would be in this case students that need an minor in different cases. A user that would be looking for a minor that hasn't really been into development. And a user that knows that he wants.
 
@@ -24,13 +24,11 @@ I really want to challenge myself to please the new students and make it so plea
 - [x] Inventory
 - [x] User scenario's
 - [x] Card sorting
-- [x] Interview mens
+- [x] Interview
 
 ## Re-arranged Inventory of the website
 
 ### What is this minor?
-
-
 
 #### Application for the minor
 **Home:** First thing you see should be the button. The button should access the information of "where can i join" and "how can i get my application.".
@@ -141,3 +139,8 @@ On content wise Nick wasn't really pleased. There was a lot of text and as a des
 ##### Well, he didn't navigate with the tab...
 
 So he uses the spacebar that functions as a "page down" I really couldn't fix the experience for him with the spacebar. What i could have done is probably let him navigate through every section via spacebar (an guided tour).
+
+
+## New design 
+
+After a making a new 
