@@ -5,6 +5,11 @@
   --mobile-sections: 2em;
 }
 
+:focus {
+  background-color: black;
+  padding: .3em;
+  color: var(--main-color)
+}
 /* ANIMATIONS */
 
 @keyframes pulseAnimation {
